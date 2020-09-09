@@ -23,10 +23,10 @@ public class CharacterMover : MonoBehaviour
         //turning on and off sprinting
         if (Input.GetKey("left shift"))
         {
-            moveSpeed = 12;
+            moveSpeed = 9;
         }
 
-        else moveSpeed = 6;
+        else moveSpeed = 5;
 
         //declaring input variables for controls, then assigning controls to movement and rotation
         var vInput = Input.GetAxis("Vertical") * moveSpeed;
