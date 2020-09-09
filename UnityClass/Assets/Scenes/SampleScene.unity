@@ -442,10 +442,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpCountMax: 2
-  moveSpeed: 4
   gravity: -7
   rotateSpeed: 100
   jumpForce: 5
+  moveSpeed: {fileID: 11400000, guid: 51a9d4d4d7c3d774c945d4d035640c56, type: 2}
+  normalSpeed: {fileID: 11400000, guid: 51a9d4d4d7c3d774c945d4d035640c56, type: 2}
+  sprintSpeed: {fileID: 11400000, guid: c47d40a79af05d249a4fc372516107c4, type: 2}
 --- !u!65 &974449574
 BoxCollider:
   m_ObjectHideFlags: 0

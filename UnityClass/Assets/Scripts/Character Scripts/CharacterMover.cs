@@ -11,8 +11,10 @@ public class CharacterMover : MonoBehaviour
     private Vector3 movement;
     public int jumpCountMax = 2;
     private int jumpCount;
-    public float moveSpeed = 4, gravity = -7.0f, rotateSpeed = 100f, jumpForce = 500;
+    public float gravity = -7.0f, rotateSpeed = 100f, jumpForce = 500;
     private float yVar;
+
+    public FloatData moveSpeed, normalSpeed, sprintSpeed;
 
     private void Start()
     {
@@ -22,8 +24,19 @@ public class CharacterMover : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        //Defining Sprint State
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            moveSpeed = sprintSpeed;
+        }
+
+        if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            moveSpeed = normalSpeed;
+        }
+        
         //declaring input variables for controls, then assigning controls to movement and rotation
-        var vInput = Input.GetAxis("Vertical") * moveSpeed;
+        var vInput = Input.GetAxis("Vertical") * moveSpeed.value;
         var hInput = Input.GetAxis("Horizontal") * rotateSpeed * Time.deltaTime;
 
         movement.Set(vInput, yVar, 0);
