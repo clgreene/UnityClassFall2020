@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(CharacterController))]
 
 public class CharacterMover : MonoBehaviour
 {
-
+    //Setting movement variables
     private CharacterController controller;
     private Vector3 movement;
     public int jumpCountMax = 2;
@@ -14,14 +15,21 @@ public class CharacterMover : MonoBehaviour
     public float gravity = -7.0f, rotateSpeed = 100f, jumpForce = 500;
     private float yVar;
 
+    //Setting Scriptable Floats
     public FloatData moveSpeed, normalSpeed, sprintSpeed;
 
-    public IntData playerJumpCount;
+    //Setting Scriptable Integers
+    public IntData playerJumpCount, healthInt;
 
+    //Setting Scriptable Vector3's
     public Vector3Data currentSpawnPoint;
+
+    //Setting health string and integers
+    public Text healthText;
 
     private void Start()
     {
+        //pulling in characters built in character controller
         controller = GetComponent<CharacterController>();
     }
 
@@ -34,11 +42,8 @@ public class CharacterMover : MonoBehaviour
             moveSpeed = sprintSpeed;
         }
 
-        if (Input.GetKeyUp(KeyCode.LeftShift))
-        {
-            moveSpeed = normalSpeed;
-        }
-        
+        else moveSpeed = normalSpeed;
+                
         //declaring input variables for controls, then assigning controls to movement and rotation
         var vInput = Input.GetAxis("Vertical") * moveSpeed.value;
         var hInput = Input.GetAxis("Horizontal") * rotateSpeed * Time.deltaTime;
@@ -49,8 +54,10 @@ public class CharacterMover : MonoBehaviour
         //rotating mesh collider with mesh
         movement = transform.TransformDirection(movement);
 
+        //Setting gravity
         yVar += gravity * Time.deltaTime;
 
+        //Defining jump counts for double jumping
         if (controller.isGrounded && movement.y <0)
         {
             yVar = -1f;
@@ -63,13 +70,14 @@ public class CharacterMover : MonoBehaviour
             jumpCount++;
         }
 
+        //giving controller defined movement
         controller.Move(movement * Time.deltaTime);
+
+        //setting health int to text
+        healthText.text = healthInt.value.ToString("0");
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        //set location data of player to the current Spawn Point
-    }
+    
 
     private void OnEnable()
     {

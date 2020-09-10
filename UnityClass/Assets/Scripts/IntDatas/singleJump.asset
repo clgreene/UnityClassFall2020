@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04033d13ac67137429495b7167ce069c, type: 3}
   m_Name: singleJump
   m_EditorClassIdentifier: 
-  value: 0
+  value: 1
