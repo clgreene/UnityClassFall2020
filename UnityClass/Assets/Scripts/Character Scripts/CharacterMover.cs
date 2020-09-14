@@ -31,6 +31,7 @@ public class CharacterMover : MonoBehaviour
     {
         //pulling in characters built in character controller
         controller = GetComponent<CharacterController>();
+        healthInt.value = 100;
     }
 
     // Update is called once per frame
@@ -81,6 +82,7 @@ public class CharacterMover : MonoBehaviour
 
     private void OnEnable()
     {
-        //set position of player to the location data of the player
+        //set position of player to last checkpoint reached
+        transform.position = currentSpawnPoint.value;
     }
 }
