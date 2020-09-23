@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//Making sure player object has a Unity Character Controller
 [RequireComponent(typeof(CharacterController))]
-
 public class PlayerMoveBehaviour : MonoBehaviour
 {
     //Setting movement variables
@@ -12,7 +12,7 @@ public class PlayerMoveBehaviour : MonoBehaviour
     private Vector3 movement;
     public int jumpCountMax = 2;
     public int jumpCount = 0;
-    public float gravity = -7.0f, rotateSpeed = 100f, jumpForce = 500;
+    public float gravity = -7.0f, rotateSpeed = 100f, jumpForce = 6;
     private float yVar;
 
     //Setting Scriptable Floats
