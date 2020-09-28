@@ -2,24 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(CharacterController))]
+//[RequireComponent(typeof(CharacterController))]
 
 public class CharacterMover : MonoBehaviour
 {
 
     private CharacterController controller;
-    private Vector3 movement;
-    public float moveSpeed, gravity = -7.0f, rotateSpeed = 100f, jumpForce = 100;
-    private float yVar;
+    public float moveSpeed, gravity = -7.0f, jumpForce = 100;
+
+    public Rigidbody rb;
+
+    public VectorThreeData FallRespawn;
 
     private void Start()
     {
-        controller = GetComponent<CharacterController>();
+        
     }
 
     // Update is called once per frame
     private void Update()
     {
+              
         //turning on and off sprinting
         if (Input.GetKey("left shift"))
         {
@@ -29,29 +32,30 @@ public class CharacterMover : MonoBehaviour
         else moveSpeed = 5;
 
         //declaring input variables for controls, then assigning controls to movement and rotation
-        var vInput = Input.GetAxis("Vertical") * moveSpeed;
-        var hInput = Input.GetAxis("Horizontal") * moveSpeed;
-
-        movement.Set(hInput, yVar, vInput);
-        
-        //rotating mesh collider with mesh
-        movement = transform.TransformDirection(movement);
-
-        yVar += gravity * Time.deltaTime;
-
-        if (controller.isGrounded && movement.y < 0)
-        {
-            yVar = -1f;
-        }
-
-        if (Input.GetButtonDown("Jump") && controller.isGrounded)
-        {
-            yVar = jumpForce;
-        }
+        if (Input.GetKey(KeyCode.W)) transform.Translate(0, 0, moveSpeed * Time.deltaTime);
+        if (Input.GetKey(KeyCode.A)) transform.Translate(-moveSpeed * Time.deltaTime, 0, 0);
+        if (Input.GetKey(KeyCode.S)) transform.Translate(0, 0, -moveSpeed * Time.deltaTime);
+        if (Input.GetKey(KeyCode.D)) transform.Translate(moveSpeed * Time.deltaTime, 0, 0);
 
         
-
-        controller.Move(movement * Time.deltaTime);
     }
+
+    private void FixedUpdate()
+    {
+        //Setting Spawn Points
+        if (controller.isGrounded == true)
+        {
+            FallRespawn.value = transform.position;
+            
+        }
+
+        //Setting Respawn Condition
+        if (transform.position.y < -15)
+        {
+            transform.position = FallRespawn.value;
+            
+        }
+    }
+
 }
 
