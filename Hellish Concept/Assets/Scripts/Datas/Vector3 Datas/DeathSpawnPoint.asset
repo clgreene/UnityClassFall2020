@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c904cb93384913e4ca5b65df74d6b355, type: 3}
   m_Name: DeathSpawnPoint
   m_EditorClassIdentifier: 
-  value: {x: 0, y: 0, z: 0}
+  value: {x: 0, y: 1.5, z: 0}

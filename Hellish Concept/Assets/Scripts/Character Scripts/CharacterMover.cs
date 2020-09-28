@@ -7,16 +7,17 @@ using UnityEngine;
 public class CharacterMover : MonoBehaviour
 {
 
-    private CharacterController controller;
     public float moveSpeed, gravity = -7.0f, jumpForce = 100;
+    public float timer = 3;
 
-    public Rigidbody rb;
+    private Rigidbody rb;
 
     public VectorThreeData FallRespawn;
 
     private void Start()
     {
-        
+        //getting parent componenets RigidBody component
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -37,17 +38,19 @@ public class CharacterMover : MonoBehaviour
         if (Input.GetKey(KeyCode.S)) transform.Translate(0, 0, -moveSpeed * Time.deltaTime);
         if (Input.GetKey(KeyCode.D)) transform.Translate(moveSpeed * Time.deltaTime, 0, 0);
 
-        
     }
 
     private void FixedUpdate()
     {
         //Setting Spawn Points
-        if (controller.isGrounded == true)
+        if (timer <= 0 && rb.velocity.y == 0)
         {
             FallRespawn.value = transform.position;
+            timer = 3;
             
         }
+
+        if (timer > 0) timer -= 1 * Time.deltaTime;
 
         //Setting Respawn Condition
         if (transform.position.y < -15)
