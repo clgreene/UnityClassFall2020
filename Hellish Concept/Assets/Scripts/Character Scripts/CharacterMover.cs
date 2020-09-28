@@ -1,13 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 //[RequireComponent(typeof(CharacterController))]
 
 public class CharacterMover : MonoBehaviour
 {
 
-    public float moveSpeed, gravity = -7.0f, jumpForce = 100;
+    public float moveSpeed;
 
     private float timer = 2;
     private Rigidbody rb;
@@ -42,6 +40,7 @@ public class CharacterMover : MonoBehaviour
             if (Input.GetKey(KeyCode.S)) transform.Translate(0, 0, -moveSpeed * Time.deltaTime);
             if (Input.GetKey(KeyCode.D)) transform.Translate(moveSpeed * Time.deltaTime, 0, 0);
         }
+
         
 
     }

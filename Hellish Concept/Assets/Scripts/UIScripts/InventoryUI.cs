@@ -4,11 +4,6 @@ public class InventoryUI : MonoBehaviour
 {
     public GameObject inventoryUI;
 
-    void Start()
-    {
-        
-    }
-
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && inventoryUI.activeSelf == true)
