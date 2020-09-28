@@ -9,18 +9,15 @@ public class InventoryUI : MonoBehaviour
         
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F) && inventoryUI.activeSelf == true)
+        if (Input.GetKeyDown(KeyCode.E) && inventoryUI.activeSelf == true)
         {
-            Debug.Log("KeyPressed");
             inventoryUI.SetActive(false);
         }
 
-        else if (Input.GetKeyDown(KeyCode.F) && inventoryUI.activeSelf == false)
+        else if (Input.GetKeyDown(KeyCode.E) && inventoryUI.activeSelf == false)
         {
-            Debug.Log("KeyPressed");
             inventoryUI.SetActive(true);
         }
     }

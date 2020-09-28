@@ -8,11 +8,12 @@ public class CharacterMover : MonoBehaviour
 {
 
     public float moveSpeed, gravity = -7.0f, jumpForce = 100;
-    public float timer = 3;
 
+    private float timer = 2;
     private Rigidbody rb;
 
     public VectorThreeData FallRespawn;
+    public BoolData dialogue;
 
     private void Start()
     {
@@ -32,11 +33,16 @@ public class CharacterMover : MonoBehaviour
 
         else moveSpeed = 5;
 
-        //declaring input variables for controls, then assigning controls to movement and rotation
-        if (Input.GetKey(KeyCode.W)) transform.Translate(0, 0, moveSpeed * Time.deltaTime);
-        if (Input.GetKey(KeyCode.A)) transform.Translate(-moveSpeed * Time.deltaTime, 0, 0);
-        if (Input.GetKey(KeyCode.S)) transform.Translate(0, 0, -moveSpeed * Time.deltaTime);
-        if (Input.GetKey(KeyCode.D)) transform.Translate(moveSpeed * Time.deltaTime, 0, 0);
+        //pausing movement while dialogue is active
+        if (dialogue.value == false) 
+        {
+            //declaring input variables for controls, then assigning controls to movement and rotation
+            if (Input.GetKey(KeyCode.W)) transform.Translate(0, 0, moveSpeed * Time.deltaTime);
+            if (Input.GetKey(KeyCode.A)) transform.Translate(-moveSpeed * Time.deltaTime, 0, 0);
+            if (Input.GetKey(KeyCode.S)) transform.Translate(0, 0, -moveSpeed * Time.deltaTime);
+            if (Input.GetKey(KeyCode.D)) transform.Translate(moveSpeed * Time.deltaTime, 0, 0);
+        }
+        
 
     }
 
@@ -46,13 +52,13 @@ public class CharacterMover : MonoBehaviour
         if (timer <= 0 && rb.velocity.y == 0)
         {
             FallRespawn.value = transform.position;
-            timer = 3;
+            timer = 2;
             
         }
 
         if (timer > 0) timer -= 1 * Time.deltaTime;
 
-        //Setting Respawn Condition
+        //Setting Fall Respawn Condition
         if (transform.position.y < -15)
         {
             transform.position = FallRespawn.value;
