@@ -51,7 +51,7 @@ public class CharacterMover : MonoBehaviour
         if (timer <= 0 && rb.velocity.y == 0)
         {
             FallRespawn.value = transform.position;
-            timer = 2;
+            timer = 2 * Time.deltaTime;
             
         }
 

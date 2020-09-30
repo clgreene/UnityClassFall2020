@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DialogueContinue : MonoBehaviour
-{
-
-    public BoolData dialogue;
+public class DialogueCont : MonoBehaviour
+{ 
     
-    void Update()
+    public GameObject dialogueCont;
+
+    void FixedUpdate()
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
-            dialogue.value = false;
             gameObject.SetActive(false);
+            dialogueCont.SetActive(true);
         }
     }
 }
