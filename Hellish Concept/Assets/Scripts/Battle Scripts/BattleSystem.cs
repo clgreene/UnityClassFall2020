@@ -16,8 +16,8 @@ public class BattleSystem : MonoBehaviour
     public Transform enemyBattleStation;
 
 
-    unit playerUnit;
-    unit enemyUnit;
+    Unit playerUnit;
+    Unit enemyUnit;
 
     public Text dialogueText;
 
@@ -34,14 +34,14 @@ public class BattleSystem : MonoBehaviour
     {
         //placing hellspawn prefab on hellspawn location
         GameObject playerGO = Instantiate(playerPrefab, playerBattleStation);
-        playerUnit = playerGO.GetComponent<unit>();
+        playerUnit = playerGO.GetComponent<Unit>();
 
         //placing enemy prefab on enemy location
         GameObject enemyGO = Instantiate(enemyPrefab, enemyBattleStation);
-        enemyUnit = enemyGO.GetComponent<unit>();
+        enemyUnit = enemyGO.GetComponent<Unit>();
 
 
-        dialogueText.text = "A " + enemyUnit.unitName + "attacks!";
+        dialogueText.text = "A " + enemyUnit.unitName + " attacks!";
     }
 
 }
