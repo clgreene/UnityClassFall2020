@@ -903,7 +903,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9934eded7c712b94799d2f2ac3298c43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 2672677036840014017, guid: 0b25cbf4cc8be9848b997d6433654c22,
+  playerPrefab: {fileID: 8073607729139040111, guid: ddbf92b6a218b55468bf908639f1e584,
     type: 3}
   enemyPrefab: {fileID: 2672677036840014017, guid: 0b25cbf4cc8be9848b997d6433654c22,
     type: 3}
@@ -1110,7 +1110,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 543.7, y: 73.72}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1866984645
 MonoBehaviour:
