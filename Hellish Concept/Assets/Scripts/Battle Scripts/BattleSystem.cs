@@ -21,16 +21,19 @@ public class BattleSystem : MonoBehaviour
 
     public Text dialogueText;
 
+    public BattleHud playerHUD;
+    public BattleHud enemyHUD;
+
     public BattleState state;
 
     // Start is called before the first frame update
     void Start()
     {
         state = BattleState.START;
-        SetupBattle();
+        StartCoroutine (SetupBattle());
     }
 
-    void SetupBattle()
+    IEnumerator SetupBattle()
     {
         //placing hellspawn prefab on hellspawn location
         GameObject playerGO = Instantiate(playerPrefab, playerBattleStation);
@@ -42,6 +45,35 @@ public class BattleSystem : MonoBehaviour
 
 
         dialogueText.text = "A " + enemyUnit.unitName + " attacks!";
+
+        playerHUD.SetHUD(playerUnit);
+        enemyHUD.SetHUD(enemyUnit);
+
+        yield return new WaitForSeconds(2f);
+
+        state = BattleState.PLAYERTURN;
+        PlayerTurn();
+    }
+
+    void PlayerTurn()
+    {
+
+        dialogueText.text = "Kill it with fire!!";
+    }
+
+    IEnumerator PlayerAttack()
+    {
+
+        yield return new WaitForSeconds(2f);
+    }
+
+    public void OnAttackButton()
+    {
+
+        if (state != BattleState.PLAYERTURN)
+            return;
+
+        StartCoroutine(PlayerAttack());
     }
 
 }
