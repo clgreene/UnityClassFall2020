@@ -9,6 +9,9 @@ public class Unit : MonoBehaviour
     public int unitLevel;
 
     public int damage;
+    public int armor;
+    public int hp;
+    public int speed;
 
     public int maxHP;
     public int currentHP;
