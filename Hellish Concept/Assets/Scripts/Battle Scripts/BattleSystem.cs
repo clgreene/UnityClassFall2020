@@ -15,6 +15,8 @@ public class BattleSystem : MonoBehaviour
     public Transform playerBattleStation;
     public Transform enemyBattleStation;
 
+    public GameObject enemyDeath;
+
 
     Unit playerUnit;
     Unit enemyUnit;
@@ -31,6 +33,7 @@ public class BattleSystem : MonoBehaviour
     {
         state = BattleState.START;
         StartCoroutine (SetupBattle());
+        
     }
 
     IEnumerator SetupBattle()
@@ -51,6 +54,8 @@ public class BattleSystem : MonoBehaviour
 
         yield return new WaitForSeconds(2f);
 
+        dialogueText.text = "Kill it with fire!";
+
         state = BattleState.PLAYERTURN;
         PlayerTurn();
     }
@@ -58,13 +63,31 @@ public class BattleSystem : MonoBehaviour
     void PlayerTurn()
     {
 
-        dialogueText.text = "Kill it with fire!!";
+        dialogueText.text = "it's your turn.";
+    }
+
+    void EnemyTurn()
+    {
+
+        dialogueText.text = "It's now the enemies turn.";
     }
 
     IEnumerator PlayerAttack()
     {
-
+        enemyUnit.currentHP -= playerUnit.damage;
         yield return new WaitForSeconds(2f);
+
+        if (enemyUnit.currentHP <= 0)
+        {
+            dialogueText.text = "you win";
+            Destroy(enemyDeath);
+            state = BattleState.WON;
+        }
+        else
+        {
+            state = BattleState.ENEMYTURN;
+            EnemyTurn();
+        }
     }
 
     public void OnAttackButton()

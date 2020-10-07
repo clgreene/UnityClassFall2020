@@ -93,6 +93,9 @@ MonoBehaviour:
   unitName: Hound
   unitLevel: 5
   damage: 25
+  armor: 0
+  hp: 0
+  speed: 0
   maxHP: 80
   currentHP: 80
 --- !u!1 &8073607729989321132
