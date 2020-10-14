@@ -1,18 +1,27 @@
-﻿using System.Collections;
+﻿
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
+[RequireComponent(typeof(NavMeshAgent))]
 public class EnemyPatrol : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private NavMeshAgent agent;
+    public List<Transform> patrolPoints;
+
+    private void Start()
     {
-        
+        i = 0;
+        agent = GetComponent<NavMeshAgent>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private int i = 0;
+    private void Update()
     {
-        
+        if (agent.pathPending || !(agent.remainingDistance < 0.5f)) return;
+        agent.destination = patrolPoints[i].position;
+        i = (i + 1) % patrolPoints.Count;
     }
 }
