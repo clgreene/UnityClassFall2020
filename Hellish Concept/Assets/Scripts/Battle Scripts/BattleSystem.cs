@@ -117,6 +117,13 @@ public class BattleSystem : MonoBehaviour
                 PlayerOneTurn();
             }
 
+            enemyUnitOneSpeed += (1 * Time.deltaTime);
+            if (enemyUnitOneSpeed >= enemyUnitOne.baseSpeed)
+            {
+                state = BattleState.ENEMYTURN;
+                EnemyOneTurn();
+            }
+
 
 
 
@@ -131,7 +138,7 @@ public class BattleSystem : MonoBehaviour
         dialogueText.text = "it's your turn.";
     }
 
-    void EnemyTurn()
+    void EnemyOneTurn()
     {
 
         dialogueText.text = "It's now the enemies turn.";
@@ -152,7 +159,7 @@ public class BattleSystem : MonoBehaviour
         else
         {
             state = BattleState.ENEMYTURN;
-            EnemyTurn();
+            EnemyOneTurn();
         }
     }
 
