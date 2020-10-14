@@ -163,6 +163,10 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
+
+
+
+    //The Following is the GUI functions for the player HUD, allowing for buttons to appear and function.
     public void OnAttackButton()
     {
 
