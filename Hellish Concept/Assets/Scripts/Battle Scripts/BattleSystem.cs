@@ -22,21 +22,22 @@ public class BattleSystem : MonoBehaviour
     public GameObject enemyPrefab;
 
     //calling the positions the hellspawn and enemy should go
+    //NEED TO FIGURE OUT HOW TO GET RID OF POSITIONS THAT DON'T HAVE HELLSPAWNS
     public GameObject playerBattleStationOne;
-    public GameObject playerBattleStationTwo;
-    public GameObject playerBattleStationThree;
+    //public GameObject playerBattleStationTwo;
+    //public GameObject playerBattleStationThree;
 
     public GameObject enemyBattleStationOne;
-    public GameObject enemyBattleStationTwo;
-    public GameObject enemyBattleStationThree;
+    //public GameObject enemyBattleStationTwo;
+    //public GameObject enemyBattleStationThree;
 
     //establishing the Unit variables for each monster on the field
-    Unit playerUnitOne;
-    Unit playerUnitTwo;
-    Unit playerUnitThree;
-    Unit enemyUnitOne;
-    Unit enemyUnitTwo;
-    Unit enemyUnitThree;
+    public Unit playerUnitOne;
+    public Unit playerUnitTwo;
+    public Unit playerUnitThree;
+    public Unit enemyUnitOne;
+    public Unit enemyUnitTwo;
+    public Unit enemyUnitThree;
 
     //Establish speed check variables for all units
     public float playerUnitOneMana;
@@ -72,18 +73,7 @@ public class BattleSystem : MonoBehaviour
         
     }
 
-    private void Update()
-    {
-        if (state != BattleState.WON || state != BattleState.LOST)
-            {
-                playerUnitOne.mana ++;
-                playerUnitTwo.mana++;
-                playerUnitThree.mana++;
-                enemyUnitOne.mana++;
-                enemyUnitTwo.mana++;
-                enemyUnitThree.mana++;
-            }
-    }
+    
 
     IEnumerator SetupBattle()
     {
@@ -105,7 +95,7 @@ public class BattleSystem : MonoBehaviour
         enemyUnitOne = enemyGO.GetComponent<Unit>();
 
         //Displaying Opening dialogue text for battle
-        dialogueText.text = "A " + enemyUnitOne.unitName + " attacks!";
+        //dialogueText.text = "A " + enemyUnitOne.unitName + " attacks!";
 
         //running the SetHUD functions of the battleHud script.
         playerHudOne.SetHUD(playerUnitOne);
@@ -115,7 +105,7 @@ public class BattleSystem : MonoBehaviour
         yield return new WaitForSeconds(2f);
 
         //change dialogue text
-        dialogueText.text = "Kill it with fire!";
+        //dialogueText.text = "Kill it with fire!";
 
         //change battle state and start next function
         state = BattleState.NULL;
@@ -151,13 +141,13 @@ public class BattleSystem : MonoBehaviour
     void PlayerOneTurn()
     {
 
-        dialogueText.text = "it's your turn.";
+        //dialogueText.text = "it's your turn.";
     }
 
     void EnemyOneTurn()
     {
 
-        dialogueText.text = "It's now the enemies turn.";
+        //dialogueText.text = "It's now the enemies turn.";
     }
 
     IEnumerator PlayerAttack()
@@ -167,7 +157,7 @@ public class BattleSystem : MonoBehaviour
 
         if (enemyUnitOne.currentHP <= 0)
         {
-            dialogueText.text = "you win";
+            //dialogueText.text = "you win";
             Destroy(enemyBattleStationOne);
             state = BattleState.WON;
         }

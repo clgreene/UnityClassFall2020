@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu]
-
-public class Unit : ScriptableObject
+public class Unit : MonoBehaviour
 {
 
     public string unitName;
