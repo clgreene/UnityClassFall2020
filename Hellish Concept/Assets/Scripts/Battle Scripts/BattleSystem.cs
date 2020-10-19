@@ -8,6 +8,9 @@ using UnityEngine.UI;
 //
 
 
+//Battlesystem first sets up the battlefield, then everyones mana begins to count up. Attacks are activated once the Units Mana is higher than their moves requirement. 
+
+
 //creating a BattleState enumerator to track what battle phase we are in so we can determine what player functions are possible.
 public enum BattleState { START, PLAYERTURN, ENEMYTURN, NULL, WON, LOST }
 
@@ -36,12 +39,12 @@ public class BattleSystem : MonoBehaviour
     Unit enemyUnitThree;
 
     //Establish speed check variables for all units
-    public float playerUnitOneSpeed;
-    public float playerUnitTwoSpeed;
-    public float playerUnitThreeSpeed;
-    public float enemyUnitOneSpeed;
-    public float enemyUnitTwoSpeed;
-    public float enemyUnitThreeSpeed;
+    public float playerUnitOneMana;
+    public float playerUnitTwoMana;
+    public float playerUnitThreeMana;
+    public float enemyUnitOneMana;
+    public float enemyUnitTwoMana;
+    public float enemyUnitThreeMana;
 
 
 
@@ -69,16 +72,29 @@ public class BattleSystem : MonoBehaviour
         
     }
 
+    private void Update()
+    {
+        if (state != BattleState.WON || state != BattleState.LOST)
+            {
+                playerUnitOne.mana ++;
+                playerUnitTwo.mana++;
+                playerUnitThree.mana++;
+                enemyUnitOne.mana++;
+                enemyUnitTwo.mana++;
+                enemyUnitThree.mana++;
+            }
+    }
+
     IEnumerator SetupBattle()
     {
         //setting all speed checkers to 0
-        //IN THE FUTURE CREATE  A START SPEED VARIABLE IN THE UNIT SCRIPT AND ADD IT TO THIS STARTING SPEED VARIABLE
-        playerUnitOneSpeed = 0;
-        playerUnitTwoSpeed = 0;
-        playerUnitThreeSpeed = 0;
-        enemyUnitOneSpeed = 0;
-        enemyUnitTwoSpeed = 0;
-        enemyUnitThreeSpeed = 0;
+        //IN THE FUTURE CREATE  A START MANA VARIABLE IN THE UNIT SCRIPT AND ADD IT TO THIS STARTING SPEED VARIABLE
+        playerUnitOneMana = 0;
+        playerUnitTwoMana = 0;
+        playerUnitThreeMana = 0;
+        enemyUnitOneMana = 0;
+        enemyUnitTwoMana = 0;
+        enemyUnitThreeMana = 0;
 
         //placing hellspawn prefab on hellspawn location
         GameObject playerGO = Instantiate(playerPrefab, playerBattleStationOne.transform);
@@ -110,15 +126,15 @@ public class BattleSystem : MonoBehaviour
     {
         while (state == BattleState.NULL)
         {
-            playerUnitOneSpeed += (1 * Time.deltaTime);
-            if (playerUnitOneSpeed >= playerUnitOne.baseSpeed)
+            playerUnitOneMana += (1 * Time.deltaTime);
+            if (playerUnitOneMana >= playerUnitOne.baseMana)
             {
                 state = BattleState.PLAYERTURN;
                 PlayerOneTurn();
             }
 
-            enemyUnitOneSpeed += (1 * Time.deltaTime);
-            if (enemyUnitOneSpeed >= enemyUnitOne.baseSpeed)
+            enemyUnitOneMana += (1 * Time.deltaTime);
+            if (enemyUnitOneMana >= enemyUnitOne.baseMana)
             {
                 state = BattleState.ENEMYTURN;
                 EnemyOneTurn();

@@ -18,12 +18,14 @@ public class Unit : ScriptableObject
     public int armor;
     public int baseHP;
     public int HP;
-    public int baseSpeed;
-    public int speed;
+    public int baseMana;
+    public int mana;
 
     public int currentHP;
 
     public Move moveOne;
+    public Move moveTwo;
+    public Move moveThree;
 
     public void typeOneMonster()
     {
