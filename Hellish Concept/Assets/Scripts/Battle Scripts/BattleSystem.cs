@@ -98,18 +98,27 @@ public class BattleSystem : MonoBehaviour
         //dialogueText.text = "A " + enemyUnitOne.unitName + " attacks!";
 
         //running the SetHUD functions of the battleHud script.
-        playerHudOne.SetHUD(playerUnitOne);
-        enemyHudOne.SetHUD(enemyUnitOne);
+        //playerHudOne.SetHUD(playerUnitOne);
+        //enemyHudOne.SetHUD(enemyUnitOne);
 
         //wait two seconds
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(0f);
 
         //change dialogue text
         //dialogueText.text = "Kill it with fire!";
 
+
+        StartCoroutine(SetupHUD());
         //change battle state and start next function
         state = BattleState.NULL;
         BattleNull();
+    }
+
+    IEnumerator SetupHUD()
+    {
+        playerHudOne.SetHUD(playerUnitOne);
+
+        yield return new WaitForSeconds(0f);
     }
 
     void BattleNull()
