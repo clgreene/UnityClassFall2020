@@ -33,19 +33,19 @@ public class BattleSystem : MonoBehaviour
 
     //establishing the Unit variables for each monster on the field
     public Unit playerUnitOne;
-    public Unit playerUnitTwo;
-    public Unit playerUnitThree;
+    //public Unit playerUnitTwo;
+    //public Unit playerUnitThree;
     public Unit enemyUnitOne;
-    public Unit enemyUnitTwo;
-    public Unit enemyUnitThree;
+    //public Unit enemyUnitTwo;
+    //public Unit enemyUnitThree;
 
     //Establish speed check variables for all units
     public float playerUnitOneMana;
-    public float playerUnitTwoMana;
-    public float playerUnitThreeMana;
+    //public float playerUnitTwoMana;
+    //public float playerUnitThreeMana;
     public float enemyUnitOneMana;
-    public float enemyUnitTwoMana;
-    public float enemyUnitThreeMana;
+    //public float enemyUnitTwoMana;
+    //public float enemyUnitThreeMana;
 
 
 
@@ -54,11 +54,11 @@ public class BattleSystem : MonoBehaviour
 
     //calling BattleHud Script for each monster on the field
     public BattleHud playerHudOne;
-    public BattleHud playerHudTwo;
-    public BattleHud playerHudThree;
+    //public BattleHud playerHudTwo;
+    //public BattleHud playerHudThree;
     public BattleHud enemyHudOne;
-    public BattleHud enemyHudTwo;
-    public BattleHud enemyHudThree;
+    //public BattleHud enemyHudTwo;
+    //public BattleHud enemyHudThree;
 
     //setting variable for our battlestate enum.
     public BattleState state;
@@ -80,11 +80,11 @@ public class BattleSystem : MonoBehaviour
         //setting all speed checkers to 0
         //IN THE FUTURE CREATE  A START MANA VARIABLE IN THE UNIT SCRIPT AND ADD IT TO THIS STARTING SPEED VARIABLE
         playerUnitOneMana = 0;
-        playerUnitTwoMana = 0;
-        playerUnitThreeMana = 0;
+        //playerUnitTwoMana = 0;
+        //playerUnitThreeMana = 0;
         enemyUnitOneMana = 0;
-        enemyUnitTwoMana = 0;
-        enemyUnitThreeMana = 0;
+        //enemyUnitTwoMana = 0;
+        //enemyUnitThreeMana = 0;
 
         //placing hellspawn prefab on hellspawn location
         GameObject playerGO = Instantiate(playerPrefab, playerBattleStationOne.transform);
@@ -111,52 +111,27 @@ public class BattleSystem : MonoBehaviour
         StartCoroutine(SetupHUD());
         //change battle state and start next function
         state = BattleState.NULL;
-        BattleNull();
+        
     }
 
     IEnumerator SetupHUD()
     {
         playerHudOne.SetHUD(playerUnitOne);
+        enemyHudOne.SetHUD(enemyUnitOne);
 
         yield return new WaitForSeconds(0f);
     }
 
-    void BattleNull()
-    {
-        while (state == BattleState.NULL)
-        {
-            playerUnitOneMana += (1 * Time.deltaTime);
-            if (playerUnitOneMana >= playerUnitOne.baseMana)
-            {
-                state = BattleState.PLAYERTURN;
-                PlayerOneTurn();
-            }
-
-            enemyUnitOneMana += (1 * Time.deltaTime);
-            if (enemyUnitOneMana >= enemyUnitOne.baseMana)
-            {
-                state = BattleState.ENEMYTURN;
-                EnemyOneTurn();
-            }
-
-
-
-
-
-        }
-    }
-
-
-    void PlayerOneTurn()
+     public void PlayerOneTurn()
     {
 
         //dialogueText.text = "it's your turn.";
     }
 
-    void EnemyOneTurn()
+    public void EnemyOneTurn()
     {
 
-        //dialogueText.text = "It's now the enemies turn.";
+        dialogueText.text = "The Enemy Attacks!!";
     }
 
     IEnumerator PlayerAttack()
