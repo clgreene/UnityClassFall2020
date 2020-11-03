@@ -1,0 +1,44 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class BattleTrigger : MonoBehaviour
+{
+
+    public Text actionText;
+
+    public SceneSwitcher SS;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        actionText.text = "";
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        
+        if (other.gameObject.CompareTag("Player")) actionText.text = "DIG?";
+
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (Input.GetKeyDown(KeyCode.F) && other.gameObject.CompareTag("Player"))
+        {
+            SS.SwitchScene(1);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        actionText.text = "";
+    }
+}

@@ -118,7 +118,7 @@ public class BattleSystem : MonoBehaviour
     {
         playerHudOne.SetHUD(playerUnitOne);
         enemyHudOne.SetHUD(enemyUnitOne);
-
+        dialogueText.text = "You Dug Up a Skeleton!";
         yield return new WaitForSeconds(0f);
     }
 

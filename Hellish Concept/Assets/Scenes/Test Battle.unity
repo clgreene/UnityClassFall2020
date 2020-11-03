@@ -442,7 +442,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameText: {fileID: 1375304070}
-  hpSlider: {fileID: 0}
 --- !u!1 &563426439
 GameObject:
   m_ObjectHideFlags: 0
@@ -487,7 +486,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameText: {fileID: 631539963}
-  hpSlider: {fileID: 0}
 --- !u!1 &631539961
 GameObject:
   m_ObjectHideFlags: 0
@@ -1143,12 +1141,15 @@ MonoBehaviour:
     type: 3}
   enemyPrefab: {fileID: 7733353073061829652, guid: 0b25cbf4cc8be9848b997d6433654c22,
     type: 3}
-  playerBattleStation: {fileID: 563426440}
-  enemyBattleStation: {fileID: 486798544}
-  enemyDeath: {fileID: 486798543}
+  playerBattleStationOne: {fileID: 563426439}
+  enemyBattleStationOne: {fileID: 486798543}
+  playerUnitOne: {fileID: 0}
+  enemyUnitOne: {fileID: 0}
+  playerUnitOneMana: 0
+  enemyUnitOneMana: 0
   dialogueText: {fileID: 1866984645}
-  playerHUD: {fileID: 563426441}
-  enemyHUD: {fileID: 486798545}
+  playerHudOne: {fileID: 0}
+  enemyHudOne: {fileID: 0}
   state: 0
 --- !u!4 &1657396883
 Transform:

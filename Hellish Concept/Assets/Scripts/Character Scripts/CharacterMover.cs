@@ -58,7 +58,7 @@ public class CharacterMover : MonoBehaviour
         if (timer > 0) timer -= 1 * Time.deltaTime;
 
         //Setting Fall Respawn Condition
-        if (transform.position.y < -15)
+        if (transform.position.y < -45)
         {
             transform.position = FallRespawn.value;
             
