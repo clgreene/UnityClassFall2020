@@ -15,6 +15,8 @@ public class PlayerMoveBehaviour : MonoBehaviour
     public float gravity = -7.0f, rotateSpeed = 100f, jumpForce = 6;
     private float yVar;
 
+    public Animator animator;
+
     //Setting Scriptable Floats
     public FloatData moveSpeed, normalSpeed, sprintSpeed;
 
@@ -37,6 +39,8 @@ public class PlayerMoveBehaviour : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        
+
         //Defining Sprint State
         if (Input.GetKey(KeyCode.LeftShift))
         {
@@ -48,6 +52,8 @@ public class PlayerMoveBehaviour : MonoBehaviour
         //declaring input variables for controls, then assigning controls to movement and rotation
         var vInput = Input.GetAxis("Vertical") * moveSpeed.value;
         var hInput = Input.GetAxis("Horizontal") * rotateSpeed * Time.deltaTime;
+
+        animator.SetFloat("walkSpeed", vInput);
 
         movement.Set(vInput, yVar, 0);
         transform.Rotate(0, hInput, 0);

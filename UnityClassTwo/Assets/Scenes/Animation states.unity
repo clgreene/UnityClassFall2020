@@ -457,6 +457,7 @@ MonoBehaviour:
   gravity: -7
   rotateSpeed: 100
   jumpForce: 6
+  animator: {fileID: 733074800}
   moveSpeed: {fileID: 11400000, guid: ec65f593314b5e74a817dd0b8eb58170, type: 2}
   normalSpeed: {fileID: 11400000, guid: 5115dbdace9bc124e823738c8d42c0d2, type: 2}
   sprintSpeed: {fileID: 11400000, guid: ef4d8a6a585e4e24ca2cff713a06864c, type: 2}
@@ -475,7 +476,7 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 0.93
+  m_Height: 0.5
   m_Radius: 0.1
   m_SlopeLimit: 45
   m_StepOffset: 0.3
