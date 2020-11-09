@@ -25,10 +25,9 @@ public class StringListOperator : ScriptableObject
     private int i;
 
 
-    public void OnTriggerEnter(Collider other)
+    public void SetStringList()
     {
-        if (other.gameObject.CompareTag("Player"))
-        {
+        
             switch (dialogue.value)
             {
                 case 1:
@@ -48,7 +47,6 @@ public class StringListOperator : ScriptableObject
                     currentList = listFive;
                     break;
             }
-        }
     }
 
     public void GetNextString()

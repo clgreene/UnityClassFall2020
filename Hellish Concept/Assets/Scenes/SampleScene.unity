@@ -11541,7 +11541,6 @@ GameObject:
   - component: {fileID: 1046021623}
   - component: {fileID: 1046021625}
   - component: {fileID: 1046021624}
-  - component: {fileID: 1046021626}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -11578,7 +11577,7 @@ MonoBehaviour:
   TriggerStayEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: 35528e5dd9694c544981a37cbbe08dce, type: 2}
+      - m_Target: {fileID: 11400000, guid: 251c5edbb2240fe419980bdd9e0adebf, type: 2}
         m_MethodName: GetNextString
         m_Mode: 1
         m_Arguments:
@@ -11592,7 +11591,7 @@ MonoBehaviour:
   TriggerEnterEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: 35528e5dd9694c544981a37cbbe08dce, type: 2}
+      - m_Target: {fileID: 11400000, guid: 251c5edbb2240fe419980bdd9e0adebf, type: 2}
         m_MethodName: SetTextUIToValue
         m_Mode: 2
         m_Arguments:
@@ -11606,7 +11605,7 @@ MonoBehaviour:
   TriggerExitEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: 35528e5dd9694c544981a37cbbe08dce, type: 2}
+      - m_Target: {fileID: 11400000, guid: 251c5edbb2240fe419980bdd9e0adebf, type: 2}
         m_MethodName: ExitTextUI
         m_Mode: 2
         m_Arguments:
@@ -11620,8 +11619,8 @@ MonoBehaviour:
   TriggerSetEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: 35528e5dd9694c544981a37cbbe08dce, type: 2}
-        m_MethodName: setStringList
+      - m_Target: {fileID: 11400000, guid: 251c5edbb2240fe419980bdd9e0adebf, type: 2}
+        m_MethodName: SetStringList
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11644,29 +11643,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1046021626
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1046021622}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e0a8cadebaf5fa48bfc43f3ba1179c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue: {fileID: 11400000, guid: dbc03dc1dd3b63a41a575b6447428925, type: 2}
-  currentList: {fileID: 11400000, guid: 35528e5dd9694c544981a37cbbe08dce, type: 2}
-  listOne: {fileID: 11400000, guid: 35528e5dd9694c544981a37cbbe08dce, type: 2}
-  listTwo: {fileID: 11400000, guid: acb919a6fafa83a4eb43250e27bc9ad2, type: 2}
-  listThree: {fileID: 0}
-  listFour: {fileID: 0}
-  listFive: {fileID: 0}
-  listSix: {fileID: 0}
-  listSeven: {fileID: 0}
-  listEight: {fileID: 0}
-  listNine: {fileID: 0}
 --- !u!1001 &1054229511
 PrefabInstance:
   m_ObjectHideFlags: 0
