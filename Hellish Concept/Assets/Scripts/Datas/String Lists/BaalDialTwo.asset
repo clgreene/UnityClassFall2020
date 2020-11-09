@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60507a9bc2add634599c5427564d7b6e, type: 3}
-  m_Name: Dialogue
+  m_Name: BaalDialTwo
   m_EditorClassIdentifier: 
   stringList:
   - F
-  - Another newly dead sinner.
-  - Wait a second... You're no mortal!
-  - You're the Prince of Hell!
-  - Welcome to Limbo!
+  - Great, now that you have that you need a monster to fight.
+  - There are some monsters right here, problem is they're all underground.
+  - You'll need a shovel to get at them, why do you go search the town for a shovel.
+  - 

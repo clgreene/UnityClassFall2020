@@ -5,17 +5,28 @@ using UnityEngine.Events;
 
 public class DialogueTrigger : MonoBehaviour
 {
-	public UnityEvent TriggerStayEvent, TriggerEnterEvent, TriggerExitEvent;
+	public UnityEvent TriggerStayEvent, TriggerEnterEvent, TriggerExitEvent, TriggerSetEvent;
+
+	private void OnTriggerEnter(Collider other)
+	{
+		if (other.gameObject.CompareTag("Player"))
+		{
+			TriggerSetEvent.Invoke();
+		}
+	}
 
 	private void OnTriggerStay(Collider other)
 	{
-		TriggerStayEvent.Invoke();
-		TriggerEnterEvent.Invoke();
+		if (other.gameObject.CompareTag("Player"))
+		{
+			TriggerStayEvent.Invoke();
+			TriggerEnterEvent.Invoke();
+		}
 	}
 
 	private void OnTriggerExit(Collider other)
 	{
-		TriggerExitEvent.Invoke();
+		if (other.gameObject.CompareTag("Player")) TriggerExitEvent.Invoke();
 	}
 
 
