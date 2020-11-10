@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//This is a brain-class script that organizes and loads in correct dialogue for an NPCs dialogue trigger scripts. It needs the DialogueTrigger script, IntData and StringListData Scriptable Objects
 
 
 [CreateAssetMenu]
 public class StringListOperator : ScriptableObject
 {
 
+    //establishing the dialogue #, a currentList for to load into the text, and all the available dialogue options
     public IntData dialogue;
     public StringListData currentList;
     public StringListData listOne;
@@ -21,10 +23,11 @@ public class StringListOperator : ScriptableObject
     public StringListData listEight;
     public StringListData listNine;
 
+    //establishing a returnValue string for dialogue statements, and an integer that will cycle through all statements in a single dialogue option
     private string returnValue;
     private int i;
 
-
+    //Logic for which dialogue option is loaded via switch statement
     public void SetStringList()
     {
         
@@ -49,6 +52,7 @@ public class StringListOperator : ScriptableObject
             }
     }
 
+    //cycle through statement and update the returnValue as you go
     public void GetNextString()
     {
         if (Input.GetKeyDown(KeyCode.F) && i < currentList.stringList.Count - 1)
@@ -59,11 +63,13 @@ public class StringListOperator : ScriptableObject
 
     }
 
+    //setting canvas text to return Value text
     public void SetTextUIToValue(Text obj)
     {
         obj.text = returnValue;
     }
 
+    //resetting dialogue text to first text option
     public void ExitTextUI(Text obj)
     {
         obj.text = null;
