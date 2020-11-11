@@ -77,9 +77,9 @@ public class BattleSystem : MonoBehaviour
     void Start()
     {
         state = BattleState.START;
-        if (hound == true) playerPrefab = Hound;
-        if (ghoul == true) playerPrefab = Ghoul;
-        if (imp == true) playerPrefab = Imp;
+        if (hound.value == true) playerPrefab = Hound;
+        if (ghoul.value == true) playerPrefab = Ghoul;
+        if (imp.value == true) playerPrefab = Imp;
         StartCoroutine (SetupBattle());
         
     }

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60507a9bc2add634599c5427564d7b6e, type: 3}
+  m_Name: VillagerOneDialOne
+  m_EditorClassIdentifier: 
+  stringList:
+  - F
+  - You look like a fighter to me...
+  - Say, if you've got a hellspawn at your disposal, mind doing me a favor?
+  - See, I live right near these rocks, and there are all these leeches hiding in
+    'em.
+  - If you were to kill off a bunch of them for me I'd recommend you to the hellspawn
+    gym.
+  - They only fight those who the townfolk here recommend see.
+  - And we don't get a lot of newcomers who want to fight.
+  - 
