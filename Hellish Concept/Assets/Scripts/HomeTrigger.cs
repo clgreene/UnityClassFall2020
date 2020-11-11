@@ -6,13 +6,14 @@ public class HomeTrigger : MonoBehaviour
 {
 
     public GameObject obj;
-    public Color oldColor;
-    public Color newColor;
+    public MeshRenderer mesh;
+
 
     // Start is called before the first frame update
     void Start()
     {
         obj = gameObject;
+        mesh = obj.GetComponent<MeshRenderer>();
     }
 
     // Update is called once per frame
@@ -25,10 +26,7 @@ public class HomeTrigger : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            oldColor = obj.GetComponent<Renderer>().material.color;
-            newColor = new Color(oldColor.r, oldColor.g, oldColor.b, oldColor.a - 0.8f);
-            obj.GetComponent<Renderer>().material.color = newColor;
-
+            mesh.enabled = false; 
         }
     }
 
@@ -36,7 +34,7 @@ public class HomeTrigger : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            obj.GetComponent<Renderer>().material.color = oldColor;
+            mesh.enabled = true;
         }
     }
 
