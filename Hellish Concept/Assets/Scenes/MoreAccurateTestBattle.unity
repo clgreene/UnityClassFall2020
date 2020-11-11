@@ -506,6 +506,12 @@ MonoBehaviour:
   playerHudOne: {fileID: 136667244}
   enemyHudOne: {fileID: 1891166822}
   state: 0
+  hound: {fileID: 11400000, guid: 6027605d51d602945900438384e44625, type: 2}
+  ghoul: {fileID: 11400000, guid: 8935955c6e882dc46913ba01aee4622e, type: 2}
+  imp: {fileID: 11400000, guid: a8d30f7a914e79f4eaf4b5962ae2c945, type: 2}
+  Hound: {fileID: 8890655025032760761, guid: ddbf92b6a218b55468bf908639f1e584, type: 3}
+  Ghoul: {fileID: 7078654430278315722, guid: 47baaca6fb643e04c8dacd5c12b6fb48, type: 3}
+  Imp: {fileID: 2008048605194665329, guid: 3c88ae2b7bca5884ca78cad3da964123, type: 3}
 --- !u!114 &136667248
 MonoBehaviour:
   m_ObjectHideFlags: 0

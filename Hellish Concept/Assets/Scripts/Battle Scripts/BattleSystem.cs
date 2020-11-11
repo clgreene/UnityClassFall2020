@@ -63,12 +63,23 @@ public class BattleSystem : MonoBehaviour
     //setting variable for our battlestate enum.
     public BattleState state;
 
+    public BoolData hound;
+    public BoolData ghoul;
+    public BoolData imp;
+
+    public GameObject Hound;
+    public GameObject Ghoul;
+    public GameObject Imp;
+
 
 
     //Start the SetupBattle Coroutine that will set up all our variables and sprites for our battle.
     void Start()
     {
         state = BattleState.START;
+        if (hound == true) playerPrefab = Hound;
+        if (ghoul == true) playerPrefab = Ghoul;
+        if (imp == true) playerPrefab = Imp;
         StartCoroutine (SetupBattle());
         
     }
