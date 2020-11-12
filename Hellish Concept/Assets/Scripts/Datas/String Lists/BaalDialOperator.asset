@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: BaalDialOperator
   m_EditorClassIdentifier: 
   dialogue: {fileID: 11400000, guid: dbc03dc1dd3b63a41a575b6447428925, type: 2}
-  currentList: {fileID: 11400000, guid: acb919a6fafa83a4eb43250e27bc9ad2, type: 2}
+  currentList: {fileID: 0}
   listOne: {fileID: 11400000, guid: 35528e5dd9694c544981a37cbbe08dce, type: 2}
   listTwo: {fileID: 11400000, guid: acb919a6fafa83a4eb43250e27bc9ad2, type: 2}
-  listThree: {fileID: 0}
+  listThree: {fileID: 11400000, guid: b32a7372db5191e4e8027b9408d360c0, type: 2}
   listFour: {fileID: 0}
   listFive: {fileID: 0}
   listSix: {fileID: 0}
