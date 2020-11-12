@@ -13,6 +13,9 @@ public class HellSpawnPickkup : MonoBehaviour
     public BoolData hellspawnSecond;
     public BoolData hellspawnThird;
 
+    public IntData dial;
+    public int nextDial;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
@@ -25,7 +28,7 @@ public class HellSpawnPickkup : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player") && Input.GetKeyDown(KeyCode.F))
         {
-            text.text = info;
+            dial.value = nextDial;
             if (hellspawnSecond.value == false && hellspawnThird.value == false) 
             {
                 hellspawn.value = true;

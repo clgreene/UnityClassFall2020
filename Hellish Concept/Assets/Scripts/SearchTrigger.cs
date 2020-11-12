@@ -10,6 +10,8 @@ public class SearchTrigger : MonoBehaviour
     public bool shov;
     public BoolData shovel;
 
+    public IntData dial;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
@@ -26,6 +28,7 @@ public class SearchTrigger : MonoBehaviour
             {
                 shovel.value = true;
                 text.text = "You found a shovel";
+                dial.value = 3;
             }
 
             else text.text = "You didn't find anything";
