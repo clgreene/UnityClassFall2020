@@ -14,6 +14,8 @@ public class BattleTrigger : MonoBehaviour
 
     public int scene;
 
+    public string text;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +31,7 @@ public class BattleTrigger : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         
-        if (other.gameObject.CompareTag("Player") && shovel.value == true) actionText.text = "DIG?";
+        if (other.gameObject.CompareTag("Player") && shovel.value == true) actionText.text = text;
 
     }
 
