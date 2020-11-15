@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MoreAccurateTestBattle.unity
     guid: 1bcf26a7ff803294ba4cb3c2ee15e21d
+  - enabled: 1
+    path: Assets/Scenes/OgreBattle.unity
+    guid: 8bebb54efe7c3b14f86e1760acbc83b1
   m_configObjects: {}

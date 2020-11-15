@@ -14519,7 +14519,7 @@ MonoBehaviour:
   actionText: {fileID: 1674396153}
   SS: {fileID: 394595329}
   shovel: {fileID: 11400000, guid: d35c3eb9227c87c45a5f6a64b92f03c1, type: 2}
-  scene: 3
+  scene: 2
   text: Enter Cave?
 --- !u!65 &997181254
 BoxCollider:
