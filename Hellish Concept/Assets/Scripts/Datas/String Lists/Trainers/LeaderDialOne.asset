@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60507a9bc2add634599c5427564d7b6e, type: 3}
+  m_Name: LeaderDialOne
+  m_EditorClassIdentifier: 
+  stringList:
+  - F
+  - A new challenger?
+  - I don't care if you are the son of satan.
+  - I'm not going to fight you until you prove yourself.
+  - Beat the other trainers and then we'll talk.
+  - 
