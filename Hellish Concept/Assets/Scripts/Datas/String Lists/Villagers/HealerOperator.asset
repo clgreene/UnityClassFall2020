@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53f8e0e1513fc6248bbfb57891fdaccb, type: 3}
   m_Name: HealerOperator
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 0}
-  currentList: {fileID: 0}
-  listOne: {fileID: 0}
+  dialogue: {fileID: 11400000, guid: 02502251dbac7864d96e2bbc6fc7a0c4, type: 2}
+  currentList: {fileID: 11400000, guid: 9d26f3d48f141d243b520d6d9401c245, type: 2}
+  listOne: {fileID: 11400000, guid: 9d26f3d48f141d243b520d6d9401c245, type: 2}
   listTwo: {fileID: 0}
   listThree: {fileID: 0}
   listFour: {fileID: 0}
