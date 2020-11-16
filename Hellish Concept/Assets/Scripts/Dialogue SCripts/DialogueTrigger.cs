@@ -11,6 +11,7 @@ public class DialogueTrigger : MonoBehaviour
 
 	//establishing Unity Events for dialogue events
 	public UnityEvent TriggerCycleEvent, TriggerUpdateEvent, TriggerExitEvent, TriggerSetEvent;
+	public bool playerNear;
 
 
 
@@ -23,14 +24,21 @@ public class DialogueTrigger : MonoBehaviour
 		}
 	}
 
+	private void Update()
+	{
+		if (playerNear == true)
+		{
+			TriggerCycleEvent.Invoke();
+			TriggerUpdateEvent.Invoke();
+		}
+	}
 
 	//Cycling through and updating the UI with the dialogue loaded in from above;
 	private void OnTriggerStay(Collider other)
 	{
 		if (other.gameObject.CompareTag("Player"))
 		{
-			TriggerCycleEvent.Invoke();
-			TriggerUpdateEvent.Invoke();
+			playerNear = true;
 		}
 	}
 
@@ -38,7 +46,11 @@ public class DialogueTrigger : MonoBehaviour
 	//resetting dialogue to begining of cycle
 	private void OnTriggerExit(Collider other)
 	{
-		if (other.gameObject.CompareTag("Player")) TriggerExitEvent.Invoke();
+		if (other.gameObject.CompareTag("Player"))
+		{
+			playerNear = false;
+			TriggerExitEvent.Invoke();
+		}
 	}
 
 
