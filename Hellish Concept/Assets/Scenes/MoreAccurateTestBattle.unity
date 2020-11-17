@@ -492,10 +492,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9934eded7c712b94799d2f2ac3298c43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 8890655025032760761, guid: ddbf92b6a218b55468bf908639f1e584,
-    type: 3}
-  enemyPrefab: {fileID: 5704450490414614086, guid: ac8e10ccb1a280d449d332fd67153532,
-    type: 3}
+  playerPrefab: {fileID: 0}
+  enemyPrefab: {fileID: 0}
   playerBattleStationOne: {fileID: 971502179}
   enemyBattleStationOne: {fileID: 1891166820}
   playerUnitOne: {fileID: 0}
@@ -525,7 +523,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BS: {fileID: 136667247}
-  chargeRate: 10
 --- !u!4 &165726503 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 400a7dab09cf9b541ab7724877945c89,

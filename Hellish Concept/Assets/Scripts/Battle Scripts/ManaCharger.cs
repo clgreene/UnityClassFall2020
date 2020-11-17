@@ -7,7 +7,7 @@ public class ManaCharger : MonoBehaviour
 
     public BattleSystem BS;
 
-    public float chargeRate = 10;
+    private float chargeRate = 0.8f;
 
     
 
@@ -24,10 +24,10 @@ public class ManaCharger : MonoBehaviour
     {
         if (BS.state == BattleState.NULL)
         {
-            BS.playerUnitOneMana += (chargeRate * Time.deltaTime);
+            BS.playerUnitOneMana += (BS.playerUnitOne.manaChargeRate * chargeRate * Time.deltaTime);
             //BS.playerUnitTwoMana += (chargeRate * Time.deltaTime);
             //BS.playerUnitThreeMana += (chargeRate * Time.deltaTime);
-            BS.enemyUnitOneMana += (chargeRate * Time.deltaTime);
+            BS.enemyUnitOneMana += (BS.enemyUnitOne.manaChargeRate * chargeRate * Time.deltaTime);
             //BS.enemyUnitTwoMana += (chargeRate * Time.deltaTime);
             //BS.enemyUnitThreeMana += (chargeRate * Time.deltaTime);
 

@@ -18,12 +18,15 @@ public class Unit : MonoBehaviour
     public int HP;
     public int baseMana;
     public int mana;
+    public int manaChargeRate;
 
     public int currentHP;
 
     public Move moveOne;
     public Move moveTwo;
     public Move moveThree;
+
+
 
     public void typeOneMonster()
     {
