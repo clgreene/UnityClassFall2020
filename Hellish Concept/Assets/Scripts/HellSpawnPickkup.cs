@@ -9,9 +9,10 @@ public class HellSpawnPickkup : MonoBehaviour
     
     public Text text;
     public string info;
-    public BoolData hellspawn;
-    public BoolData hellspawnSecond;
-    public BoolData hellspawnThird;
+    public Unit hellspawn;
+    
+
+    public Inventory inv;
 
     public IntData dial;
     public int nextDial;
@@ -28,10 +29,11 @@ public class HellSpawnPickkup : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player") && Input.GetKeyDown(KeyCode.F))
         {
-            dial.value = nextDial;
-            if (hellspawnSecond.value == false && hellspawnThird.value == false) 
+            
+            if (dial.value == 1) 
             {
-                hellspawn.value = true;
+                inv.addUnit(hellspawn);
+                dial.value = 2;
                 text.text = "You obtained a Hellspawn.";
             }
 
@@ -47,15 +49,4 @@ public class HellSpawnPickkup : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
