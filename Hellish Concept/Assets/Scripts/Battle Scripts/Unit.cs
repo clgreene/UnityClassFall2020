@@ -9,7 +9,7 @@ public class Unit : MonoBehaviour
     public int unitLevel;
     public int xp;
     public Sprite unitSprite;
-    public int unitType;
+
 
     public int baseDamage;
     public int damage;
@@ -26,6 +26,31 @@ public class Unit : MonoBehaviour
     public Move moveTwo;
     public Move moveThree;
 
+    private int[] xpLevels = new int[] 
+        { 
+            5, 10, 15, 20, 27, 34, 41, 50, 59, 68, 80, 92, 105, 120
+        };
+
+
+    public void checkLevel()
+    {
+        for (int i = 0; i < 50; i++)
+        {
+            if (xp < xpLevels[i])
+            {
+                unitLevel = i+1;
+                setValues();
+                break;
+            }
+        }
+    }
+
+    public void setValues()
+    {
+        HP = baseHP + (unitLevel * 2);
+        damage = baseDamage + unitLevel;
+
+    }
 
 
     public void typeOneMonster()

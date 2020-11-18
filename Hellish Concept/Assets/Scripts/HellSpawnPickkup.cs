@@ -14,7 +14,7 @@ public class HellSpawnPickkup : MonoBehaviour
 
     public int count;
 
-    private Inventory inv;
+    public Inventory inv;
 
     public IntData dial;
     public int nextDial;
@@ -39,12 +39,13 @@ public class HellSpawnPickkup : MonoBehaviour
         if (other.gameObject.CompareTag("Player") && Input.GetKeyDown(KeyCode.F))
         {
             
-            if (inv.slots.Length == 0)
+            if (inv.units.Count == 0)
             {
-                
+                inv.addUnit(gameObject);
+                Object.Destroy(gameObject);
+                dial.value = nextDial;
                 text.text = "You obtained a Hellspawn.";
             }
- 
 
             else text.text = "You already chose one, don't be greedy!";
         }

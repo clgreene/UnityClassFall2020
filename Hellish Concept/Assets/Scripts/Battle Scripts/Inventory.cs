@@ -5,8 +5,7 @@ using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
-    public bool[] isFull;
-    public GameObject[] slots;
+    
 
     public GameObject hellspawnPrefab;
     public GameObject inventory;
@@ -18,7 +17,6 @@ public class Inventory : MonoBehaviour
     public Text HStwo;
     public Text HSthree;
 
-    public Unit newHS;
     public Unit oldHS;
     public Unit first;
     public Unit second;
@@ -34,13 +32,28 @@ public class Inventory : MonoBehaviour
         GameObject newHellspawn = Instantiate(hellspawnPrefab, inventory.transform, false);
 
         oldHS = hellspawn.GetComponent<Unit>();
-        
-        //oldHS.exportValues();
 
-        //newHellspawn.GetComponent<Unit>().importValues();
+        newHellspawn.GetComponent<Unit>().unitName = oldHS.unitName;
+        newHellspawn.GetComponent<Unit>().unitLevel = oldHS.unitLevel;
+        newHellspawn.GetComponent<Unit>().xp = oldHS.xp;
+        newHellspawn.GetComponent<Unit>().unitSprite = oldHS.unitSprite;
+        newHellspawn.GetComponent<Unit>().baseDamage = oldHS.baseDamage;
+        newHellspawn.GetComponent<Unit>().damage = oldHS.damage;
+        newHellspawn.GetComponent<Unit>().armor = oldHS.armor;
+        newHellspawn.GetComponent<Unit>().baseHP = oldHS.baseHP;
+        newHellspawn.GetComponent<Unit>().HP = oldHS.HP;
+        newHellspawn.GetComponent<Unit>().baseMana = oldHS.baseMana;
+        newHellspawn.GetComponent<Unit>().mana = oldHS.mana;
+        newHellspawn.GetComponent<Unit>().manaChargeRate = oldHS.manaChargeRate;
+        newHellspawn.GetComponent<Unit>().currentHP = oldHS.currentHP;
+        newHellspawn.GetComponent<Unit>().moveOne = oldHS.moveOne;
+        newHellspawn.GetComponent<Unit>().moveTwo = oldHS.moveTwo;
+        newHellspawn.GetComponent<Unit>().moveThree = oldHS.moveThree;
+
 
 
         units.Add(newHellspawn);
+
         //position = units.BinarySearch(hellspawn);
         //displayHellspawns();
     }

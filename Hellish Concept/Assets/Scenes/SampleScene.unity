@@ -555,17 +555,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc64173c8023ea84596f912f83c840a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFull: 00
-  slots:
-  - {fileID: 455188897}
-  hellspawnPrefab: {fileID: 0}
-  inventory: {fileID: 0}
+  hellspawnPrefab: {fileID: 4539372263618171944, guid: db1df1af293759d49a8a7d4b9c1e7f1f,
+    type: 3}
+  inventory: {fileID: 2047748019}
   units: []
   items: []
   HSone: {fileID: 0}
   HStwo: {fileID: 0}
   HSthree: {fileID: 0}
-  newHS: {fileID: 0}
   oldHS: {fileID: 0}
   first: {fileID: 0}
   second: {fileID: 0}
@@ -5359,10 +5356,10 @@ Transform:
   m_GameObject: {fileID: 255683211}
   m_LocalRotation: {x: -0.07763839, y: 0.27360207, z: 0.26171306, w: 0.92229086}
   m_LocalPosition: {x: -163.14, y: 2.73, z: 25.94}
-  m_LocalScale: {x: 2.2016, y: 0.16596, z: 0.17493}
+  m_LocalScale: {x: 2.2016003, y: 0.16595998, z: 0.17492999}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_Father: {fileID: 513153614}
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: -16.644001, y: 28.969002, z: 27.356}
 --- !u!4 &260127522 stripped
 Transform:
@@ -7190,12 +7187,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 342387893}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -82.269875, y: 4.76, z: 35.26}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_Father: {fileID: 513153614}
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &352457185
 PrefabInstance:
@@ -10858,6 +10855,15 @@ Transform:
   - {fileID: 1329707433}
   - {fileID: 831196418}
   - {fileID: 423562696}
+  - {fileID: 342387895}
+  - {fileID: 1315014326}
+  - {fileID: 1294996618}
+  - {fileID: 710459795}
+  - {fileID: 787501143}
+  - {fileID: 255683215}
+  - {fileID: 1108667198}
+  - {fileID: 540628795}
+  - {fileID: 1717307795}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11462,12 +11468,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 540628791}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -118.23, y: 1.5, z: 48.94}
   m_LocalScale: {x: 14.03881, y: 1.9771582, z: 12.959529}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_Father: {fileID: 513153614}
+  m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &550411096
 PrefabInstance:
@@ -13892,12 +13898,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 710459793}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -41.599876, y: 1.298389, z: 63.519997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_Father: {fileID: 513153614}
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &714248555
 PrefabInstance:
@@ -15717,12 +15723,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 787501141}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -107.96987, y: 4.76, z: 17.259998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_Father: {fileID: 513153614}
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &792924611
 GameObject:
@@ -23816,12 +23822,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1108667196}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -162.42, y: 3.15, z: 25.43}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_Father: {fileID: 513153614}
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1110309847
 GameObject:
@@ -28086,12 +28092,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1294996616}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -43.40987, y: 1.298389, z: 10.96}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_Father: {fileID: 513153614}
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1297160896 stripped
 GameObject:
@@ -28242,12 +28248,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1315014324}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -107.59988, y: 4.76, z: 46.02}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_Father: {fileID: 513153614}
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1322124218
 GameObject:
@@ -31293,7 +31299,6 @@ MonoBehaviour:
   unitLevel: 5
   xp: 50
   unitSprite: {fileID: 0}
-  unitType: 0
   baseDamage: 0
   damage: 0
   armor: 0
@@ -31383,6 +31388,7 @@ MonoBehaviour:
     F to pickup.
   hellspawn: {fileID: 1454373938}
   count: 0
+  inv: {fileID: 0}
   dial: {fileID: 11400000, guid: dbc03dc1dd3b63a41a575b6447428925, type: 2}
   nextDial: 2
 --- !u!1 &1456760800
@@ -36092,12 +36098,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1717307791}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -118.36, y: 4.6, z: 49.02}
   m_LocalScale: {x: 1.5489, y: 2.825813, z: 1.5489}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_Father: {fileID: 513153614}
+  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1729399617
 GameObject:
@@ -37582,7 +37588,6 @@ MonoBehaviour:
   unitLevel: 5
   xp: 0
   unitSprite: {fileID: 0}
-  unitType: 0
   baseDamage: 0
   damage: 0
   armor: 0
@@ -37671,6 +37676,7 @@ MonoBehaviour:
   info: the Imp is devious and loves to play with fire, and it's food. F to pickup.
   hellspawn: {fileID: 1791585450}
   count: 0
+  inv: {fileID: 0}
   dial: {fileID: 11400000, guid: dbc03dc1dd3b63a41a575b6447428925, type: 2}
   nextDial: 2
 --- !u!1001 &1791917712
@@ -41262,7 +41268,6 @@ MonoBehaviour:
   unitLevel: 5
   xp: 0
   unitSprite: {fileID: 0}
-  unitType: 0
   baseDamage: 0
   damage: 0
   armor: 0
@@ -41351,6 +41356,7 @@ MonoBehaviour:
   info: The Ghoul like to cause havoc and possess it's victims. F to pickup.
   hellspawn: {fileID: 2025663737}
   count: 0
+  inv: {fileID: 0}
   dial: {fileID: 11400000, guid: dbc03dc1dd3b63a41a575b6447428925, type: 2}
   nextDial: 2
 --- !u!1 &2026281830
