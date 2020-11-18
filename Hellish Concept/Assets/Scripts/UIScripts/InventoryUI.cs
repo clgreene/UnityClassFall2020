@@ -3,17 +3,30 @@
 public class InventoryUI : MonoBehaviour
 {
     public GameObject inventoryUI;
+    public InventoryStates invStates;
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && inventoryUI.activeSelf == true)
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            inventoryUI.SetActive(false);
+            if (invStates.state == invState.Closed) invStates.state = invState.Main;
+            else invStates.state = invState.Closed;
         }
 
-        else if (Input.GetKeyDown(KeyCode.E) && inventoryUI.activeSelf == false)
-        {
-            inventoryUI.SetActive(true);
-        }
+    }
+
+    public void seeHellspawns()
+    {
+        invStates.state = invState.Hellspawn;
+    }
+
+    public void seeItems()
+    {
+        invStates.state = invState.Item;
+    }
+
+    public void back()
+    {
+        invStates.state = invState.Main;
     }
 }

@@ -10,7 +10,8 @@ public class HellSpawnPickkup : MonoBehaviour
     public Text text;
     public string info;
     public Unit hellspawn;
-    
+
+    public int count;
 
     public Inventory inv;
 
@@ -22,6 +23,8 @@ public class HellSpawnPickkup : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             text.text = info;
+            count = inv.units.Count;
+            Debug.Log(count);
         }
     }
 
@@ -30,7 +33,7 @@ public class HellSpawnPickkup : MonoBehaviour
         if (other.gameObject.CompareTag("Player") && Input.GetKeyDown(KeyCode.F))
         {
             
-            if (dial.value == 1) 
+            if (count == 0) 
             {
                 inv.addUnit(hellspawn);
                 dial.value = 2;
