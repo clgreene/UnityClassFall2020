@@ -71,15 +71,17 @@ public class BattleSystem : MonoBehaviour
     public GameObject Ghoul;
     public GameObject Imp;
 
+    public Inventory inv;
+
 
 
     //Start the SetupBattle Coroutine that will set up all our variables and sprites for our battle.
-    void Start()
+    public void StartBattle()
     {
+
         state = BattleState.START;
-        if (hound.value == true) playerPrefab = Hound;
-        if (ghoul.value == true) playerPrefab = Ghoul;
-        if (imp.value == true) playerPrefab = Imp;
+        playerPrefab = inv.units[0];
+        enemyPrefab.GetComponent<Unit>().checkLevel();
         StartCoroutine (SetupBattle());
         
     }

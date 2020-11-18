@@ -45,6 +45,7 @@ public class HellSpawnPickkup : MonoBehaviour
                 Object.Destroy(gameObject);
                 dial.value = nextDial;
                 text.text = "You obtained a Hellspawn.";
+                resetText();
             }
 
             else text.text = "You already chose one, don't be greedy!";
@@ -57,6 +58,12 @@ public class HellSpawnPickkup : MonoBehaviour
         {
             text.text = "";
         }
+    }
+
+    private IEnumerator resetText()
+    {
+        yield return new WaitForSeconds(2f);
+        text.text = "";
     }
 
 }
