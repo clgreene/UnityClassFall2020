@@ -12,6 +12,7 @@ public class HellSpawnPickkup : MonoBehaviour
     public string info;
     public Unit hellspawn;
 
+
     public int count;
 
     public Inventory inv;

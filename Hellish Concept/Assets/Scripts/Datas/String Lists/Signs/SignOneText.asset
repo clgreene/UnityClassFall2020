@@ -15,5 +15,7 @@ MonoBehaviour:
   stringList:
   - F
   - -Welcome to Hell-
-  - Friendly tip for visitors, press F to read signs, talk, and pick up stuff.
+  - 'Friendly tips for visitors: '
+  - Press F to talk, pick up, and interact with stuff.
+  - Press E to open your backpack.
   - 

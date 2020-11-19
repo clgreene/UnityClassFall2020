@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Bite
   m_EditorClassIdentifier: 
   moveName: Bite
-  moveDamage: 20
+  moveStrength: 0
+  moveMana: 60

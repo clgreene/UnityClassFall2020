@@ -8,6 +8,7 @@ public class Move : ScriptableObject
 {
 
     public string moveName;
-    public int moveDamage;
+    public int moveStrength;
     public int moveMana;
+    
 }

@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6414ee556a87d9549a075c191e23c6f5, type: 3}
   m_Name: BaalDialogueNumber
   m_EditorClassIdentifier: 
-  value: 3
+  value: 1
