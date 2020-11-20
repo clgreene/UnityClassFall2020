@@ -33,14 +33,17 @@ public class ManaCharger : MonoBehaviour
 
             if (BS.playerUnitOneMana >= 100)
             {
+                BS.activeUnit = BS.playerUnitOne;
+                BS.defendingUnit = BS.enemyUnitOne;
                 BS.state = BattleState.PLAYERTURN;
-                BS.PlayerOneTurn();
 
             }
             if (BS.enemyUnitOneMana >= 100)
             {
+                BS.activeUnit = BS.enemyUnitOne;
+                BS.defendingUnit = BS.playerUnitOne;
                 BS.state = BattleState.ENEMYTURN;
-                BS.EnemyOneTurn();
+                BS.enemyOneTurn = true;
             }
         }
         

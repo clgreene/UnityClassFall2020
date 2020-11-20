@@ -63,15 +63,13 @@ public class BattleSystem : MonoBehaviour
     //setting variable for our battlestate enum.
     public BattleState state;
 
-    public BoolData hound;
-    public BoolData ghoul;
-    public BoolData imp;
-
-    public GameObject Hound;
-    public GameObject Ghoul;
-    public GameObject Imp;
-
     public Inventory inv;
+
+    public Unit activeUnit;
+    public Unit defendingUnit;
+
+    public bool playerOneTurn;
+    public bool enemyOneTurn;
 
 
 
@@ -82,6 +80,8 @@ public class BattleSystem : MonoBehaviour
         state = BattleState.START;
         playerPrefab = inv.units[0];
         enemyPrefab.GetComponent<Unit>().checkLevel();
+        playerOneTurn = false;
+        enemyOneTurn = false;
         StartCoroutine (SetupBattle());
         
     }
@@ -131,52 +131,26 @@ public class BattleSystem : MonoBehaviour
     {
         playerHudOne.SetHUD(playerUnitOne);
         enemyHudOne.SetHUD(enemyUnitOne);
-        dialogueText.text = "You Dug Up a Skeleton!";
+        dialogueText.text = "A " + enemyUnitOne.unitName + "Is attacking!";
         yield return new WaitForSeconds(0f);
     }
 
-     public void PlayerOneTurn()
-    {
+     
 
-        //dialogueText.text = "it's your turn.";
-    }
-
-    public void EnemyOneTurn()
-    {
-
-        dialogueText.text = "The Enemy Attacks!!";
-    }
-
-    IEnumerator PlayerAttack()
-    {
-        enemyUnitOne.currentHP -= playerUnitOne.damage;
-        yield return new WaitForSeconds(2f);
-
-        if (enemyUnitOne.currentHP <= 0)
-        {
-            //dialogueText.text = "you win";
-            Destroy(enemyBattleStationOne);
-            state = BattleState.WON;
-        }
-
-        else
-        {
-            state = BattleState.ENEMYTURN;
-            EnemyOneTurn();
-        }
-    }
 
 
 
 
     //The Following is the GUI functions for the player HUD, allowing for buttons to appear and function.
-    public void OnAttackButton()
+    public void MoveOneButton()
     {
 
         if (state != BattleState.PLAYERTURN)
             return;
 
-        StartCoroutine(PlayerAttack());
+        playerUnitOne.moveOne();
+        state = BattleState.NULL;
+        
     }
 
 }

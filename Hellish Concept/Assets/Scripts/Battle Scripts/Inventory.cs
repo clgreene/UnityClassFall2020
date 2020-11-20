@@ -46,10 +46,12 @@ public class Inventory : MonoBehaviour
         newHellspawn.GetComponent<Unit>().mana = oldHS.mana;
         newHellspawn.GetComponent<Unit>().manaChargeRate = oldHS.manaChargeRate;
         newHellspawn.GetComponent<Unit>().currentHP = oldHS.currentHP;
-        newHellspawn.GetComponent<Unit>().moveOne = oldHS.moveOne;
-        newHellspawn.GetComponent<Unit>().moveTwo = oldHS.moveTwo;
-        newHellspawn.GetComponent<Unit>().moveThree = oldHS.moveThree;
+        newHellspawn.GetComponent<Unit>().moveOneSet = oldHS.moveOneSet;
+        newHellspawn.GetComponent<Unit>().moveTwoSet = oldHS.moveTwoSet;
+        newHellspawn.GetComponent<Unit>().moveThreeSet = oldHS.moveThreeSet;
 
+        newHellspawn.GetComponent<Unit>().setValues();
+        newHellspawn.GetComponent<Unit>().resetValues();
 
 
         units.Add(newHellspawn);

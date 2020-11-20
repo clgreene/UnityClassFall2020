@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Unit : MonoBehaviour
 {
@@ -22,9 +23,26 @@ public class Unit : MonoBehaviour
 
     public int currentHP;
 
-    public Move moveOne;
-    public Move moveTwo;
-    public Move moveThree;
+    public string moveOneSet;
+    public string moveTwoSet;
+    public string moveThreeSet;
+
+    public MonoBehaviour attacks;
+
+    public void moveOne() 
+    {
+        attacks.StartCoroutine(moveOneSet);
+    }
+
+    public void moveTwo()
+    {
+
+    }
+
+    public void moveThree()
+    {
+
+    }
 
     private int[] xpLevels = new int[] 
         { 
@@ -49,6 +67,16 @@ public class Unit : MonoBehaviour
     {
         HP = baseHP + (unitLevel * 2);
         damage = baseDamage + unitLevel;
+
+    }
+
+    public void resetValues()
+    {
+        currentHP = HP;
+    }
+
+    public void attackOne()
+    {
 
     }
 

@@ -9278,6 +9278,7 @@ GameObject:
   - component: {fileID: 394595330}
   - component: {fileID: 394595329}
   - component: {fileID: 394595331}
+  - component: {fileID: 394595332}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -9323,6 +9324,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75b80f095c6566f4cbedccb9a3654896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &394595332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394595328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d73265a8beed394baf81bb1a5199c4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unit: {fileID: 0}
+  damage: 0
+  BS: {fileID: 0}
 --- !u!1 &396526204
 GameObject:
   m_ObjectHideFlags: 0
@@ -10804,6 +10820,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameText: {fileID: 873599821}
+  moveOne: {fileID: 0}
+  moveTwo: {fileID: 0}
+  moveThree: {fileID: 0}
 --- !u!114 &446726096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10830,13 +10849,11 @@ MonoBehaviour:
   playerHudOne: {fileID: 446726095}
   enemyHudOne: {fileID: 720558142}
   state: 0
-  hound: {fileID: 11400000, guid: 6027605d51d602945900438384e44625, type: 2}
-  ghoul: {fileID: 11400000, guid: 8935955c6e882dc46913ba01aee4622e, type: 2}
-  imp: {fileID: 11400000, guid: a8d30f7a914e79f4eaf4b5962ae2c945, type: 2}
-  Hound: {fileID: 8890655025032760761, guid: ddbf92b6a218b55468bf908639f1e584, type: 3}
-  Ghoul: {fileID: 7078654430278315722, guid: 47baaca6fb643e04c8dacd5c12b6fb48, type: 3}
-  Imp: {fileID: 2008048605194665329, guid: 3c88ae2b7bca5884ca78cad3da964123, type: 3}
   inv: {fileID: 24926202}
+  activeUnit: {fileID: 0}
+  defendingUnit: {fileID: 0}
+  playerOneTurn: 0
+  enemyOneTurn: 0
 --- !u!1 &455188897
 GameObject:
   m_ObjectHideFlags: 0
@@ -11939,6 +11956,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameText: {fileID: 658407951}
+  moveOne: {fileID: 0}
+  moveTwo: {fileID: 0}
+  moveThree: {fileID: 0}
 --- !u!1 &499613925
 GameObject:
   m_ObjectHideFlags: 0
@@ -15291,9 +15311,9 @@ Transform:
   m_LocalPosition: {x: -86.17, y: 4.92, z: 37.96}
   m_LocalScale: {x: 1.4599, y: 1.4599, z: 1.4599}
   m_Children:
+  - {fileID: 1780573126}
   - {fileID: 1000026994}
   - {fileID: 2141748244}
-  - {fileID: 1780573126}
   m_Father: {fileID: 1311454122}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -16125,6 +16145,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameText: {fileID: 1246051865}
+  moveOne: {fileID: 0}
+  moveTwo: {fileID: 0}
+  moveThree: {fileID: 0}
 --- !u!224 &720558143
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17851,6 +17874,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameText: {fileID: 873599821}
+  moveOne: {fileID: 0}
+  moveTwo: {fileID: 0}
+  moveThree: {fileID: 0}
 --- !u!114 &786810089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17877,13 +17903,11 @@ MonoBehaviour:
   playerHudOne: {fileID: 786810088}
   enemyHudOne: {fileID: 720558142}
   state: 0
-  hound: {fileID: 11400000, guid: 6027605d51d602945900438384e44625, type: 2}
-  ghoul: {fileID: 11400000, guid: 8935955c6e882dc46913ba01aee4622e, type: 2}
-  imp: {fileID: 11400000, guid: a8d30f7a914e79f4eaf4b5962ae2c945, type: 2}
-  Hound: {fileID: 8890655025032760761, guid: ddbf92b6a218b55468bf908639f1e584, type: 3}
-  Ghoul: {fileID: 7078654430278315722, guid: 47baaca6fb643e04c8dacd5c12b6fb48, type: 3}
-  Imp: {fileID: 2008048605194665329, guid: 3c88ae2b7bca5884ca78cad3da964123, type: 3}
   inv: {fileID: 24926202}
+  activeUnit: {fileID: 0}
+  defendingUnit: {fileID: 0}
+  playerOneTurn: 0
+  enemyOneTurn: 0
 --- !u!1 &787501141
 GameObject:
   m_ObjectHideFlags: 0
@@ -34636,6 +34660,7 @@ GameObject:
   - component: {fileID: 1454373941}
   - component: {fileID: 1454373942}
   - component: {fileID: 1454373938}
+  - component: {fileID: 1454373943}
   m_Layer: 0
   m_Name: StarterHound
   m_TagString: Untagged
@@ -34673,18 +34698,19 @@ MonoBehaviour:
   unitLevel: 5
   xp: 50
   unitSprite: {fileID: 0}
-  baseDamage: 0
+  baseDamage: 9
   damage: 0
   armor: 0
-  baseHP: 0
+  baseHP: 13
   HP: 0
   baseMana: 0
   mana: 0
-  manaChargeRate: 0
+  manaChargeRate: 51
   currentHP: 0
-  moveOne: {fileID: 0}
-  moveTwo: {fileID: 0}
-  moveThree: {fileID: 0}
+  moveOneSet: Bite
+  moveTwoSet: 
+  moveThreeSet: 
+  attacks: {fileID: 1454373943}
 --- !u!23 &1454373939
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -34765,6 +34791,21 @@ MonoBehaviour:
   inv: {fileID: 0}
   dial: {fileID: 11400000, guid: dbc03dc1dd3b63a41a575b6447428925, type: 2}
   nextDial: 2
+--- !u!114 &1454373943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1454373936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d73265a8beed394baf81bb1a5199c4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unit: {fileID: 0}
+  damage: 0
+  BS: {fileID: 0}
 --- !u!1 &1456760800
 GameObject:
   m_ObjectHideFlags: 0
@@ -39431,7 +39472,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1651125241}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &1651125244
 Camera:
   m_ObjectHideFlags: 0
@@ -41282,7 +41323,7 @@ Transform:
   m_LocalScale: {x: 0.8675482, y: 0.16253327, z: 2.0195832}
   m_Children: []
   m_Father: {fileID: 687838559}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -45.02, y: 0, z: 0}
 --- !u!114 &1780573127
 MonoBehaviour:
@@ -42003,9 +42044,10 @@ MonoBehaviour:
   mana: 0
   manaChargeRate: 0
   currentHP: 0
-  moveOne: {fileID: 0}
-  moveTwo: {fileID: 0}
-  moveThree: {fileID: 0}
+  moveOneSet: 
+  moveTwoSet: 
+  moveThreeSet: 
+  attacks: {fileID: 0}
 --- !u!23 &1791585451
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -43470,7 +43512,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1865359070}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &1865359073
 Camera:
   m_ObjectHideFlags: 0
@@ -46396,9 +46438,10 @@ MonoBehaviour:
   mana: 0
   manaChargeRate: 0
   currentHP: 0
-  moveOne: {fileID: 0}
-  moveTwo: {fileID: 0}
-  moveThree: {fileID: 0}
+  moveOneSet: 
+  moveTwoSet: 
+  moveThreeSet: 
+  attacks: {fileID: 0}
 --- !u!23 &2025663738
 MeshRenderer:
   m_ObjectHideFlags: 0
