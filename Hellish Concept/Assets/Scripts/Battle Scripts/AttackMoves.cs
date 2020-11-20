@@ -19,12 +19,30 @@ public class AttackMoves : MonoBehaviour
 
     IEnumerator Bite()
     {
-        BS.activeUnit.mana -= 40;
-        int damage = BS.activeUnit.damage;
-        BS.defendingUnit.HP -= (damage * 40);
-        BS.dialogueText.text = BS.activeUnit.unitName + " Used Bite!";
-        yield return new WaitForSeconds(2f);
+        
+        Debug.Log("HELLO!");
+        BS = FindObjectOfType<BattleSystem>();
+
+        if (BS.state != BattleState.PLAYERTURN)
+        {
+            BS.dialogueText.text = "Your Hellspawn isn't ready to attack!";
+            yield return new WaitForSeconds(0f);
+        }
+
+        else
+        {
+            BS.playerUnitOneMana -= 40;
+            int damage = BS.activeUnit.damage;
+            BS.enemyUnitOne.HP -= (damage * 40);
+            BS.dialogueText.text = BS.activeUnit.unitName + " Used Bite!";
+            BS.state = BattleState.NULL;
+            yield return new WaitForSeconds(2f);
+        }
+        
+        
     }
+
+
     
     
 }

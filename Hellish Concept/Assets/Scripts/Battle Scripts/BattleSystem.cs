@@ -71,7 +71,7 @@ public class BattleSystem : MonoBehaviour
     public bool playerOneTurn;
     public bool enemyOneTurn;
 
-
+    public Unit enemyUnitType;
 
     //Start the SetupBattle Coroutine that will set up all our variables and sprites for our battle.
     public void StartBattle()
@@ -130,7 +130,7 @@ public class BattleSystem : MonoBehaviour
     IEnumerator SetupHUD()
     {
         playerHudOne.SetHUD(playerUnitOne);
-        enemyHudOne.SetHUD(enemyUnitOne);
+        //enemyHudOne.SetHUD(enemyUnitOne);
         dialogueText.text = "A " + enemyUnitOne.unitName + "Is attacking!";
         yield return new WaitForSeconds(0f);
     }

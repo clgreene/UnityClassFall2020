@@ -23,6 +23,8 @@ public class BattleTrigger : MonoBehaviour
 
     public BoolData cantMove;
 
+    public GameObject battleEnemy;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -52,6 +54,7 @@ public class BattleTrigger : MonoBehaviour
             cam2.enabled = true;
             dialogue.SetActive(false);
             battleUI.SetActive(true);
+            BS.enemyPrefab = battleEnemy;
             BS.StartBattle();
             cantMove.value = true;
 

@@ -15,7 +15,8 @@ public class BattleHud : MonoBehaviour
     public void SetHUD(Unit unit)
     {
         nameText.text = unit.unitName;
-        moveOne.onClick.AddListener(unit.moveOne);
+        moveOne.onClick.AddListener(() => unit.moveOne());
+        moveOne.GetComponent<Text>().text = unit.moveOneSet;
         //levelText.text = "lvl" + unit.unitLevel;
         //hpSlider.maxValue = unit.maxHP;
         //hpSlider.value = unit.currentHP;
