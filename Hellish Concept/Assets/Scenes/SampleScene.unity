@@ -1211,7 +1211,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh151614
+  m_Name: pb_Mesh18312
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2189,75 +2189,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &108163464
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 108163465}
-  - component: {fileID: 108163467}
-  - component: {fileID: 108163466}
-  m_Layer: 0
-  m_Name: GraveTRigger (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &108163465
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 108163464}
-  m_LocalRotation: {x: -0, y: 0.36175084, z: -0, w: 0.9322748}
-  m_LocalPosition: {x: 14.12, y: -6.214, z: -23.35}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1283300749}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &108163466
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 108163464}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 596fa8ec7291c284ca45b05dec4e6ab5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  actionText: {fileID: 1674396153}
-  SS: {fileID: 394595329}
-  shovel: {fileID: 11400000, guid: d35c3eb9227c87c45a5f6a64b92f03c1, type: 2}
-  scene: 1
-  text: Dig?
-  cam1: {fileID: 963194227}
-  cam2: {fileID: 1651125244}
-  dialogue: {fileID: 171398843}
-  battleUI: {fileID: 1992310514}
-  BS: {fileID: 786810089}
-  cantMove: {fileID: 11400000, guid: d39e6858060ffb6418d944930a7d7ed1, type: 2}
-  battleEnemy: {fileID: 0}
---- !u!65 &108163467
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 108163464}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.696331, y: 1.9669361, z: 3.5819836}
-  m_Center: {x: -0.025362015, y: 0.48346806, z: 0.5022688}
 --- !u!1 &110819705
 GameObject:
   m_ObjectHideFlags: 0
@@ -2385,8 +2316,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.23, y: 0.22}
-  m_SizeDelta: {x: 55.98, y: 8.89}
+  m_AnchoredPosition: {x: 0.000012517, y: 0.22}
+  m_SizeDelta: {x: 64, y: 8.89}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &113985278
 MonoBehaviour:
@@ -6236,10 +6167,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -100.48707, y: -6.963482, z: 31.616234}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 852342337}
-  - {fileID: 354409520}
-  - {fileID: 1537023648}
+  m_Children: []
   m_Father: {fileID: 513153614}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8420,75 +8348,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 352457185}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &354409519
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 354409520}
-  - component: {fileID: 354409522}
-  - component: {fileID: 354409521}
-  m_Layer: 0
-  m_Name: Leech Trigger (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &354409520
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 354409519}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.68293, y: 11.237482, z: -15.416233}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 262014131}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &354409521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 354409519}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 596fa8ec7291c284ca45b05dec4e6ab5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  actionText: {fileID: 1674396153}
-  SS: {fileID: 394595329}
-  shovel: {fileID: 11400000, guid: d35c3eb9227c87c45a5f6a64b92f03c1, type: 2}
-  scene: 2
-  text: 
-  cam1: {fileID: 0}
-  cam2: {fileID: 0}
-  dialogue: {fileID: 0}
-  battleUI: {fileID: 0}
-  BS: {fileID: 0}
-  cantMove: {fileID: 0}
-  battleEnemy: {fileID: 0}
---- !u!65 &354409522
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 354409519}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 5.1788864, y: 2.5447292, z: 5.020441}
-  m_Center: {x: 0.5696449, y: 0.1945715, z: 1.2214975}
 --- !u!4 &354832753 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 8c14e0314ff479a4fb496a53e0cc51b6,
@@ -9312,6 +9171,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 786810086}
+  - {fileID: 1992310515}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11866,9 +11726,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameText: {fileID: 658407951}
+  health: {fileID: 0}
+  mana: {fileID: 0}
   moveOne: {fileID: 0}
+  moveOneText: {fileID: 0}
   moveTwo: {fileID: 0}
   moveThree: {fileID: 0}
+  BS: {fileID: 0}
 --- !u!1 &499613925
 GameObject:
   m_ObjectHideFlags: 0
@@ -14458,75 +14322,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d99a3620eafc6344c8677117b39ee481, type: 3}
---- !u!1 &640338484
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 640338485}
-  - component: {fileID: 640338487}
-  - component: {fileID: 640338486}
-  m_Layer: 0
-  m_Name: GraveTRigger (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &640338485
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 640338484}
-  m_LocalRotation: {x: -0, y: 0.36175084, z: -0, w: 0.9322748}
-  m_LocalPosition: {x: 18.68, y: -6.214, z: -26.44}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1283300749}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &640338486
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 640338484}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 596fa8ec7291c284ca45b05dec4e6ab5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  actionText: {fileID: 1674396153}
-  SS: {fileID: 394595329}
-  shovel: {fileID: 11400000, guid: d35c3eb9227c87c45a5f6a64b92f03c1, type: 2}
-  scene: 1
-  text: Dig?
-  cam1: {fileID: 963194227}
-  cam2: {fileID: 1651125244}
-  dialogue: {fileID: 171398843}
-  battleUI: {fileID: 1992310514}
-  BS: {fileID: 786810089}
-  cantMove: {fileID: 11400000, guid: d39e6858060ffb6418d944930a7d7ed1, type: 2}
-  battleEnemy: {fileID: 0}
---- !u!65 &640338487
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 640338484}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.696331, y: 1.9669361, z: 3.5819836}
-  m_Center: {x: -0.025362015, y: 0.48346806, z: 0.5022688}
 --- !u!1 &644316732
 GameObject:
   m_ObjectHideFlags: 0
@@ -16056,9 +15851,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameText: {fileID: 1246051865}
+  health: {fileID: 1767725919}
+  mana: {fileID: 0}
   moveOne: {fileID: 0}
+  moveOneText: {fileID: 0}
   moveTwo: {fileID: 0}
   moveThree: {fileID: 0}
+  BS: {fileID: 786810089}
 --- !u!224 &720558143
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16508,7 +16307,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh152054
+  m_Name: pb_Mesh18804
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -17785,9 +17584,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameText: {fileID: 873599821}
+  health: {fileID: 1419917334}
+  mana: {fileID: 0}
   moveOne: {fileID: 1790869921}
+  moveOneText: {fileID: 1570609297}
   moveTwo: {fileID: 0}
   moveThree: {fileID: 0}
+  BS: {fileID: 0}
 --- !u!114 &786810089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18021,8 +17824,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.23, y: 0.22}
-  m_SizeDelta: {x: 55.98, y: 8.89}
+  m_AnchoredPosition: {x: 0.0000061989, y: 0.22}
+  m_SizeDelta: {x: 64, y: 8.89}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &792830102
 MonoBehaviour:
@@ -20602,75 +20405,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1874726186}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &852342336
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 852342337}
-  - component: {fileID: 852342339}
-  - component: {fileID: 852342338}
-  m_Layer: 0
-  m_Name: Leech Trigger
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &852342337
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 852342336}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.2486267, y: 11.237482, z: -17.56425}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 262014131}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &852342338
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 852342336}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 596fa8ec7291c284ca45b05dec4e6ab5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  actionText: {fileID: 1674396153}
-  SS: {fileID: 394595329}
-  shovel: {fileID: 11400000, guid: d35c3eb9227c87c45a5f6a64b92f03c1, type: 2}
-  scene: 2
-  text: 
-  cam1: {fileID: 0}
-  cam2: {fileID: 0}
-  dialogue: {fileID: 0}
-  battleUI: {fileID: 0}
-  BS: {fileID: 0}
-  cantMove: {fileID: 0}
-  battleEnemy: {fileID: 0}
---- !u!65 &852342339
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 852342336}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 5.1788864, y: 2.5447292, z: 5.020441}
-  m_Center: {x: 0.5696449, y: 0.1945715, z: 1.2214975}
 --- !u!1 &853380323
 GameObject:
   m_ObjectHideFlags: 0
@@ -20864,7 +20598,6 @@ Transform:
   m_LocalPosition: {x: -155.22945, y: 11.680239, z: 12.885349}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 997181252}
   - {fileID: 1865359071}
   - {fileID: 1936583828}
   m_Father: {fileID: 0}
@@ -22145,7 +21878,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh151664
+  m_Name: pb_Mesh18366
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -22856,8 +22589,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0.21999979}
+  m_SizeDelta: {x: 0, y: -7.11}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &936388140
 MonoBehaviour:
@@ -24120,75 +23853,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 995556110}
   m_CullTransparentMesh: 0
---- !u!1 &997181251
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 997181252}
-  - component: {fileID: 997181254}
-  - component: {fileID: 997181253}
-  m_Layer: 0
-  m_Name: OgreTrigger
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &997181252
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 997181251}
-  m_LocalRotation: {x: -0, y: 0.3619975, z: -0, w: 0.93217903}
-  m_LocalPosition: {x: -4.572235, y: -11.036239, z: 15.414558}
-  m_LocalScale: {x: 2.3990006, y: 1, z: 2.5094004}
-  m_Children: []
-  m_Father: {fileID: 858239970}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 84.86101, z: 0}
---- !u!114 &997181253
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 997181251}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 596fa8ec7291c284ca45b05dec4e6ab5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  actionText: {fileID: 1674396153}
-  SS: {fileID: 394595329}
-  shovel: {fileID: 11400000, guid: d35c3eb9227c87c45a5f6a64b92f03c1, type: 2}
-  scene: 2
-  text: Enter Cave?
-  cam1: {fileID: 963194227}
-  cam2: {fileID: 1865359073}
-  dialogue: {fileID: 171398843}
-  battleUI: {fileID: 1936583827}
-  BS: {fileID: 0}
-  cantMove: {fileID: 11400000, guid: d39e6858060ffb6418d944930a7d7ed1, type: 2}
-  battleEnemy: {fileID: 0}
---- !u!65 &997181254
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 997181251}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.696331, y: 1.9669361, z: 3.5819836}
-  m_Center: {x: -0.025362015, y: 0.48346806, z: 0.5022688}
 --- !u!1001 &1000026993
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28658,7 +28322,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh151734
+  m_Name: pb_Mesh18444
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -30669,13 +30333,8 @@ Transform:
   m_LocalPosition: {x: -40.844593, y: 16.959133, z: -14.457733}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1651125242}
   - {fileID: 1965776088}
-  - {fileID: 640338485}
-  - {fileID: 108163465}
-  - {fileID: 1975825827}
-  - {fileID: 1457501625}
-  - {fileID: 1757298186}
-  - {fileID: 2100376239}
   m_Father: {fileID: 2133750346}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -33617,7 +33276,7 @@ RectTransform:
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: -0.23001099, y: 0.2200098}
   m_SizeDelta: {x: -8.02, y: -7.11}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -34810,75 +34469,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1456760800}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1457501624
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1457501625}
-  - component: {fileID: 1457501627}
-  - component: {fileID: 1457501626}
-  m_Layer: 0
-  m_Name: GraveTRigger (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1457501625
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1457501624}
-  m_LocalRotation: {x: -0, y: 0.36175084, z: -0, w: 0.9322748}
-  m_LocalPosition: {x: 11.3, y: -6.214, z: -32.75}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1283300749}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1457501626
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1457501624}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 596fa8ec7291c284ca45b05dec4e6ab5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  actionText: {fileID: 1674396153}
-  SS: {fileID: 394595329}
-  shovel: {fileID: 11400000, guid: d35c3eb9227c87c45a5f6a64b92f03c1, type: 2}
-  scene: 1
-  text: Dig?
-  cam1: {fileID: 963194227}
-  cam2: {fileID: 1651125244}
-  dialogue: {fileID: 171398843}
-  battleUI: {fileID: 1992310514}
-  BS: {fileID: 786810089}
-  cantMove: {fileID: 11400000, guid: d39e6858060ffb6418d944930a7d7ed1, type: 2}
-  battleEnemy: {fileID: 0}
---- !u!65 &1457501627
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1457501624}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.696331, y: 1.9669361, z: 3.5819836}
-  m_Center: {x: -0.025362015, y: 0.48346806, z: 0.5022688}
 --- !u!1 &1460652989
 GameObject:
   m_ObjectHideFlags: 0
@@ -35030,8 +34620,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.23001099, y: 0.2200098}
-  m_SizeDelta: {x: -8.02, y: -7.11}
+  m_AnchoredPosition: {x: 0.000015258789, y: 0.2200098}
+  m_SizeDelta: {x: 0.0000076294, y: -7.11}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1465241779
 MonoBehaviour:
@@ -36892,75 +36482,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 5302568919011541938, guid: e381ff5030642f14ca88a55d1e2de6f4, type: 3}
---- !u!1 &1537023647
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1537023648}
-  - component: {fileID: 1537023650}
-  - component: {fileID: 1537023649}
-  m_Layer: 0
-  m_Name: Leech Trigger (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1537023648
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1537023647}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -22.25293, y: 11.237482, z: -10.216234}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 262014131}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1537023649
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1537023647}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 596fa8ec7291c284ca45b05dec4e6ab5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  actionText: {fileID: 1674396153}
-  SS: {fileID: 394595329}
-  shovel: {fileID: 11400000, guid: d35c3eb9227c87c45a5f6a64b92f03c1, type: 2}
-  scene: 2
-  text: 
-  cam1: {fileID: 0}
-  cam2: {fileID: 0}
-  dialogue: {fileID: 0}
-  battleUI: {fileID: 0}
-  BS: {fileID: 0}
-  cantMove: {fileID: 0}
-  battleEnemy: {fileID: 0}
---- !u!65 &1537023650
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1537023647}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 5.1788864, y: 2.5447292, z: 5.020441}
-  m_Center: {x: 0.5696449, y: 0.1945715, z: 1.2214975}
 --- !u!1 &1537516638
 GameObject:
   m_ObjectHideFlags: 0
@@ -36995,8 +36516,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.23001099, y: 0.21999979}
+  m_SizeDelta: {x: -8.02, y: -7.11}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1537516640
 MonoBehaviour:
@@ -39371,12 +38892,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1651125241}
-  m_LocalRotation: {x: -0.056362614, y: -0.37300727, z: -0.022707751, w: 0.9258365}
-  m_LocalPosition: {x: 0, y: 12.78, z: -40.6}
+  m_LocalRotation: {x: -0.060759995, y: -0.012823135, z: -0.00078064017, w: 0.99806976}
+  m_LocalPosition: {x: 12.521425, y: -4.1791334, z: -46.849895}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 2133750346}
-  m_RootOrder: 2
+  m_Father: {fileID: 1283300749}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -6.9670005, y: -43.888, z: 0}
 --- !u!81 &1651125243
 AudioListener:
@@ -40863,75 +40384,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &1757298185
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1757298186}
-  - component: {fileID: 1757298188}
-  - component: {fileID: 1757298187}
-  m_Layer: 0
-  m_Name: GraveTRigger (5)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1757298186
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1757298185}
-  m_LocalRotation: {x: -0, y: 0.36175084, z: -0, w: 0.9322748}
-  m_LocalPosition: {x: 5.29, y: -6.214, z: -35.37}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1283300749}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1757298187
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1757298185}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 596fa8ec7291c284ca45b05dec4e6ab5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  actionText: {fileID: 1674396153}
-  SS: {fileID: 394595329}
-  shovel: {fileID: 11400000, guid: d35c3eb9227c87c45a5f6a64b92f03c1, type: 2}
-  scene: 1
-  text: Dig?
-  cam1: {fileID: 963194227}
-  cam2: {fileID: 1651125244}
-  dialogue: {fileID: 171398843}
-  battleUI: {fileID: 1992310514}
-  BS: {fileID: 786810089}
-  cantMove: {fileID: 11400000, guid: d39e6858060ffb6418d944930a7d7ed1, type: 2}
-  battleEnemy: {fileID: 0}
---- !u!65 &1757298188
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1757298185}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.696331, y: 1.9669361, z: 3.5819836}
-  m_Center: {x: -0.025362015, y: 0.48346806, z: 0.5022688}
 --- !u!1 &1767725917
 GameObject:
   m_ObjectHideFlags: 0
@@ -42632,8 +42084,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.23001099, y: 0.2200098}
-  m_SizeDelta: {x: -8.02, y: -7.11}
+  m_AnchoredPosition: {x: 0, y: 0.21999979}
+  m_SizeDelta: {x: -0.000011444, y: -7.11}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1823394816
 MonoBehaviour:
@@ -43404,7 +42856,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1865359071
 Transform:
   m_ObjectHideFlags: 0
@@ -43417,7 +42869,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 858239970}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -4.8760004, y: -95.26, z: 0}
 --- !u!81 &1865359072
 AudioListener:
@@ -44609,7 +44061,7 @@ RectTransform:
   - {fileID: 18181488}
   - {fileID: 491105152}
   m_Father: {fileID: 858239970}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -45239,7 +44691,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1283300749}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1965776089
 MonoBehaviour:
@@ -45266,75 +44718,6 @@ MonoBehaviour:
   cantMove: {fileID: 11400000, guid: d39e6858060ffb6418d944930a7d7ed1, type: 2}
   battleEnemy: {fileID: 4767779951288982540, guid: 7dc443dab216f8143acc5cef22650c26,
     type: 3}
---- !u!1 &1975825826
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1975825827}
-  - component: {fileID: 1975825829}
-  - component: {fileID: 1975825828}
-  m_Layer: 0
-  m_Name: GraveTRigger (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1975825827
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1975825826}
-  m_LocalRotation: {x: -0, y: 0.36175084, z: -0, w: 0.9322748}
-  m_LocalPosition: {x: 5.89, y: -6.214, z: -27.55}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1283300749}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1975825828
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1975825826}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 596fa8ec7291c284ca45b05dec4e6ab5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  actionText: {fileID: 1674396153}
-  SS: {fileID: 394595329}
-  shovel: {fileID: 11400000, guid: d35c3eb9227c87c45a5f6a64b92f03c1, type: 2}
-  scene: 1
-  text: Dig?
-  cam1: {fileID: 963194227}
-  cam2: {fileID: 1651125244}
-  dialogue: {fileID: 171398843}
-  battleUI: {fileID: 1992310514}
-  BS: {fileID: 786810089}
-  cantMove: {fileID: 11400000, guid: d39e6858060ffb6418d944930a7d7ed1, type: 2}
-  battleEnemy: {fileID: 0}
---- !u!65 &1975825829
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1975825826}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.696331, y: 1.9669361, z: 3.5819836}
-  m_Center: {x: -0.025362015, y: 0.48346806, z: 0.5022688}
 --- !u!1 &1983424471
 GameObject:
   m_ObjectHideFlags: 0
@@ -45497,7 +44880,7 @@ GameObject:
   - component: {fileID: 1992310517}
   - component: {fileID: 1992310516}
   m_Layer: 5
-  m_Name: BattleHudGrave
+  m_Name: BattleHud
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45510,8 +44893,8 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1992310514}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 17.427732}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 234695919}
@@ -45520,12 +44903,12 @@ RectTransform:
   - {fileID: 1922530590}
   - {fileID: 813800066}
   - {fileID: 720558143}
-  m_Father: {fileID: 2133750346}
+  m_Father: {fileID: 394595330}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 1.4945946, y: -11.2286005}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1992310516
@@ -47763,75 +47146,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 400a7dab09cf9b541ab7724877945c89, type: 3}
---- !u!1 &2100376238
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2100376239}
-  - component: {fileID: 2100376241}
-  - component: {fileID: 2100376240}
-  m_Layer: 0
-  m_Name: GraveTRigger (6)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2100376239
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2100376238}
-  m_LocalRotation: {x: -0, y: 0.36175084, z: -0, w: 0.9322748}
-  m_LocalPosition: {x: 9.18, y: -6.214, z: -40.21}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1283300749}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2100376240
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2100376238}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 596fa8ec7291c284ca45b05dec4e6ab5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  actionText: {fileID: 1674396153}
-  SS: {fileID: 394595329}
-  shovel: {fileID: 11400000, guid: d35c3eb9227c87c45a5f6a64b92f03c1, type: 2}
-  scene: 1
-  text: Dig?
-  cam1: {fileID: 963194227}
-  cam2: {fileID: 1651125244}
-  dialogue: {fileID: 171398843}
-  battleUI: {fileID: 1992310514}
-  BS: {fileID: 786810089}
-  cantMove: {fileID: 11400000, guid: d39e6858060ffb6418d944930a7d7ed1, type: 2}
-  battleEnemy: {fileID: 0}
---- !u!65 &2100376241
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2100376238}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.696331, y: 1.9669361, z: 3.5819836}
-  m_Center: {x: -0.025362015, y: 0.48346806, z: 0.5022688}
 --- !u!1 &2102615736 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4473984409997532297, guid: e381ff5030642f14ca88a55d1e2de6f4,
@@ -48477,8 +47791,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1283300749}
-  - {fileID: 1992310515}
-  - {fileID: 1651125242}
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

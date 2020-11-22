@@ -7,25 +7,43 @@ public class BattleHud : MonoBehaviour
 {
 
     public Text nameText;
+    public Slider health;
+    public Slider mana;
     public Button moveOne;
+    public Text moveOneText;
     public Button moveTwo;
     public Button moveThree;
-    //public Slider hpSlider;
+
+    public BattleSystem BS;
 
     public void SetHUD(Unit unit)
     {
         nameText.text = unit.unitName;
         moveOne.onClick.AddListener(() => unit.moveOne());
-        moveOne.GetComponent<Text>().text = unit.moveOneSet;
+        moveOneText.text = unit.moveOneSet;
+        health.maxValue = unit.HP;
+        SetHP(unit);
+        
+        //mana.maxValue = 100;
+        //mana.value = BS.playerUnitOneMana;
         //levelText.text = "lvl" + unit.unitLevel;
         //hpSlider.maxValue = unit.maxHP;
         //hpSlider.value = unit.currentHP;
     }
 
-    public void SetHP(int hp)
+    public void SetEnemyHUD(Unit unit)
+    {
+        nameText.text = unit.unitName;
+        unit.setValues();
+        unit.currentHP = unit.HP;
+        health.maxValue = unit.HP;
+        SetHP(unit);
+    }
+
+    public void SetHP(Unit unit)
     {
 
-        //hpSlider.value = hp;
+        health.value = unit.currentHP;
     }
 
 }

@@ -19,8 +19,6 @@ public class AttackMoves : MonoBehaviour
 
     IEnumerator Bite()
     {
-        
-        Debug.Log("HELLO!");
         BS = FindObjectOfType<BattleSystem>();
 
         if (BS.state != BattleState.PLAYERTURN)
@@ -33,10 +31,12 @@ public class AttackMoves : MonoBehaviour
         {
             BS.playerUnitOneMana -= 40;
             int damage = BS.activeUnit.damage;
-            BS.enemyUnitOne.HP -= (damage * 40);
+            BS.enemyUnitOne.currentHP -= ((damage * 40) / 100);
+            BS.enemyHudOne.SetHP(BS.enemyUnitOne);
             BS.dialogueText.text = BS.activeUnit.unitName + " Used Bite!";
-            BS.state = BattleState.NULL;
             yield return new WaitForSeconds(2f);
+            BS.state = BattleState.NULL;
+            
         }
         
         

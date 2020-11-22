@@ -130,7 +130,7 @@ public class BattleSystem : MonoBehaviour
     IEnumerator SetupHUD()
     {
         playerHudOne.SetHUD(playerUnitOne);
-        //enemyHudOne.SetHUD(enemyUnitOne);
+        enemyHudOne.SetEnemyHUD(enemyUnitOne);
         dialogueText.text = "A " + enemyUnitOne.unitName + "Is attacking!";
         yield return new WaitForSeconds(0f);
     }
@@ -138,19 +138,5 @@ public class BattleSystem : MonoBehaviour
      
 
 
-
-
-
-    //The Following is the GUI functions for the player HUD, allowing for buttons to appear and function.
-    public void MoveOneButton()
-    {
-
-        if (state != BattleState.PLAYERTURN)
-            return;
-
-        playerUnitOne.moveOne();
-        state = BattleState.NULL;
-        
-    }
 
 }

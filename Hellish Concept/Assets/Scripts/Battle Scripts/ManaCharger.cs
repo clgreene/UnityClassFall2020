@@ -35,6 +35,7 @@ public class ManaCharger : MonoBehaviour
             {
                 BS.activeUnit = BS.playerUnitOne;
                 BS.defendingUnit = BS.enemyUnitOne;
+                BS.dialogueText.text = "It's your turn.";
                 BS.state = BattleState.PLAYERTURN;
 
             }
