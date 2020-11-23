@@ -46,4 +46,10 @@ public class BattleHud : MonoBehaviour
         health.value = unit.currentHP;
     }
 
+    public void closeHUD()
+    {
+
+        moveOne.onClick.RemoveAllListeners();
+    }
+
 }

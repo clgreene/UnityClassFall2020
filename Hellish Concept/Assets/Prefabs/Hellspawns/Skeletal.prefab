@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2613037165326026414}
   - component: {fileID: 1550903851342932984}
-  - component: {fileID: -8008968305189170596}
   m_Layer: 0
   m_Name: Skeletal
   m_TagString: Untagged
@@ -60,20 +59,5 @@ MonoBehaviour:
   moveOneSet: Bite
   moveTwoSet: 
   moveThreeSet: 
-  attacks: {fileID: -8008968305189170596}
-  BS: {fileID: 0}
---- !u!114 &-8008968305189170596
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4767779951288982540}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d73265a8beed394baf81bb1a5199c4a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  unit: {fileID: 1550903851342932984}
-  damage: 0
+  attacks: {fileID: 0}
   BS: {fileID: 0}

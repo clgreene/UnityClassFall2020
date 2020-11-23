@@ -5,7 +5,6 @@ using UnityEngine;
 public class AttackMoves : MonoBehaviour
 {
 
-    public Unit unit;
     public int damage;
     public BattleSystem BS;
 

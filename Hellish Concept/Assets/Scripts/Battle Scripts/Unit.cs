@@ -34,7 +34,7 @@ public class Unit : MonoBehaviour
     public void Start()
     {
         BS = FindObjectOfType<BattleSystem>();
-        attacks = gameObject.GetComponent<AttackMoves>();
+        attacks = FindObjectOfType<AttackMoves>();
     }
 
     public void moveOne() 

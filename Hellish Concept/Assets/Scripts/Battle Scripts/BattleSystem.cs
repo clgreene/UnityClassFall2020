@@ -145,8 +145,8 @@ public class BattleSystem : MonoBehaviour
 
     public void checkWin()
     {
-        if (playerUnitOne.currentHP == 0) state = BattleState.LOST;
-        if (enemyUnitOne.currentHP == 0) state = BattleState.WON;
+        if (playerUnitOne.currentHP <= 0) state = BattleState.LOST;
+        if (enemyUnitOne.currentHP <= 0) state = BattleState.WON;
         
     }
 
@@ -159,6 +159,7 @@ public class BattleSystem : MonoBehaviour
         cantMove.value = false;
         Object.Destroy(playerGO);
         Object.Destroy(enemyGO);
+        playerHudOne.closeHUD();
         battleUI.SetActive(false);
     }
 
@@ -171,6 +172,7 @@ public class BattleSystem : MonoBehaviour
         cantMove.value = false;
         Object.Destroy(playerGO);
         Object.Destroy(enemyGO);
+        playerHudOne.closeHUD();
         battleUI.SetActive(false);
     }
 
