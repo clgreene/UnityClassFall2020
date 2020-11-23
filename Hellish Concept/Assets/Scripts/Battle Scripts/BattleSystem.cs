@@ -27,6 +27,8 @@ public class BattleSystem : MonoBehaviour
     //public GameObject playerBattleStationTwo;
     //public GameObject playerBattleStationThree;
 
+    public GameObject playerMoves;
+
     public GameObject enemyBattleStationOne;
     //public GameObject enemyBattleStationTwo;
     //public GameObject enemyBattleStationThree;
@@ -68,10 +70,17 @@ public class BattleSystem : MonoBehaviour
     public Unit activeUnit;
     public Unit defendingUnit;
 
-    public bool playerOneTurn;
-    public bool enemyOneTurn;
-
     public Unit enemyUnitType;
+
+    public Camera mainCam;
+    public Camera battleCam;
+
+    public BoolData cantMove;
+
+    public GameObject battleUI;
+
+    public GameObject playerGO;
+    public GameObject enemyGO;
 
     //Start the SetupBattle Coroutine that will set up all our variables and sprites for our battle.
     public void StartBattle()
@@ -80,8 +89,7 @@ public class BattleSystem : MonoBehaviour
         state = BattleState.START;
         playerPrefab = inv.units[0];
         enemyPrefab.GetComponent<Unit>().checkLevel();
-        playerOneTurn = false;
-        enemyOneTurn = false;
+        playerMoves.SetActive(false);
         StartCoroutine (SetupBattle());
         
     }
@@ -100,11 +108,11 @@ public class BattleSystem : MonoBehaviour
         //enemyUnitThreeMana = 0;
 
         //placing hellspawn prefab on hellspawn location
-        GameObject playerGO = Instantiate(playerPrefab, playerBattleStationOne.transform);
+        playerGO = Instantiate(playerPrefab, playerBattleStationOne.transform);
         playerUnitOne = playerGO.GetComponent<Unit>();
 
         //placing enemy prefab on enemy location
-        GameObject enemyGO = Instantiate(enemyPrefab, enemyBattleStationOne.transform);
+        enemyGO = Instantiate(enemyPrefab, enemyBattleStationOne.transform);
         enemyUnitOne = enemyGO.GetComponent<Unit>();
 
         //Displaying Opening dialogue text for battle
@@ -135,6 +143,41 @@ public class BattleSystem : MonoBehaviour
         yield return new WaitForSeconds(0f);
     }
 
+    public void checkWin()
+    {
+        if (playerUnitOne.currentHP == 0) state = BattleState.LOST;
+        if (enemyUnitOne.currentHP == 0) state = BattleState.WON;
+        
+    }
+
+    public IEnumerator youWin()
+    {
+        dialogueText.text = "You Win!";
+        yield return new WaitForSeconds(3f);
+        mainCam.enabled = true;
+        battleCam.enabled = false;
+        cantMove.value = false;
+        Object.Destroy(playerGO);
+        Object.Destroy(enemyGO);
+        battleUI.SetActive(false);
+    }
+
+    public IEnumerator youLose()
+    {
+        dialogueText.text = "You Lose!";
+        yield return new WaitForSeconds(3f);
+        mainCam.enabled = true;
+        battleCam.enabled = false;
+        cantMove.value = false;
+        Object.Destroy(playerGO);
+        Object.Destroy(enemyGO);
+        battleUI.SetActive(false);
+    }
+
+    IEnumerator wait()
+    {
+        yield return new WaitForSeconds(3f);
+    }
      
 
 

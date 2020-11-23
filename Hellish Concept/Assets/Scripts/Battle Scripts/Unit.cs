@@ -29,8 +29,21 @@ public class Unit : MonoBehaviour
 
     public MonoBehaviour attacks;
 
+    public BattleSystem BS;
+
+    public void Start()
+    {
+        BS = FindObjectOfType<BattleSystem>();
+        attacks = gameObject.GetComponent<AttackMoves>();
+    }
+
     public void moveOne() 
     {
+        if (BS.state != BattleState.PLAYERTURN || BS.state != BattleState.ENEMYTURN) 
+        {
+            BS.dialogueText.text = "Your Hellspawn isn't ready to attack!";
+
+        } 
         
         attacks.StartCoroutine(moveOneSet);
     }

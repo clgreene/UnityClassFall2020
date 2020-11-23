@@ -17,11 +17,9 @@ public class BattleTrigger : MonoBehaviour
     public string text;
 
     public Camera cam1, cam2;
-    public GameObject dialogue;
+
     public GameObject battleUI;
     public BattleSystem BS;
-
-    public BoolData cantMove;
 
     public GameObject battleEnemy;
 
@@ -29,6 +27,8 @@ public class BattleTrigger : MonoBehaviour
     void Start()
     {
         actionText.text = "";
+        BS.mainCam = cam1;
+        BS.battleCam = cam2;
         cam1.enabled = true;
         cam2.enabled = false;
     }
@@ -48,15 +48,14 @@ public class BattleTrigger : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (Input.GetKeyDown(KeyCode.F) && other.gameObject.CompareTag("Player") && shovel.value == true)
+        if (Input.GetKeyDown(KeyCode.F) && other.gameObject.CompareTag("Player") && shovel.value == true && !battleUI.activeSelf)
         {
             cam1.enabled = false;
             cam2.enabled = true;
-            dialogue.SetActive(false);
             battleUI.SetActive(true);
             BS.enemyPrefab = battleEnemy;
             BS.StartBattle();
-            cantMove.value = true;
+            BS.cantMove.value = true;
 
         }
     }
