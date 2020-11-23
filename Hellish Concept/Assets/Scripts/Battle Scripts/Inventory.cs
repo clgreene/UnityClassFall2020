@@ -60,6 +60,11 @@ public class Inventory : MonoBehaviour
         //displayHellspawns();
     }
 
+    public void updateUnit(GameObject hellspawn)
+    {
+
+    }
+
     public void addItem(Item item)
     {
         items.Add(item);

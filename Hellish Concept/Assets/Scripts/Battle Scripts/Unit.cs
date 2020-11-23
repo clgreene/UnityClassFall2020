@@ -9,6 +9,7 @@ public class Unit : MonoBehaviour
     public string unitName;
     public int unitLevel;
     public int xp;
+    public int xpAwarded;
     public Sprite unitSprite;
 
 
@@ -60,7 +61,7 @@ public class Unit : MonoBehaviour
 
     private int[] xpLevels = new int[] 
         { 
-            5, 10, 15, 20, 27, 34, 41, 50, 59, 68, 80, 92, 105, 120
+            5, 10, 15, 20, 27, 34, 41, 50, 59, 68, 80, 92, 105, 120, 140, 165, 195, 230
         };
 
 
@@ -80,7 +81,9 @@ public class Unit : MonoBehaviour
     public void setValues()
     {
         HP = baseHP + (unitLevel * 2);
+        currentHP += baseHP + (unitLevel * 2);
         damage = baseDamage + unitLevel;
+        xpAwarded = unitLevel;
 
     }
 

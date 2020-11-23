@@ -153,6 +153,10 @@ public class BattleSystem : MonoBehaviour
     public IEnumerator youWin()
     {
         dialogueText.text = "You Win!";
+        inv.units[0].GetComponent<Unit>().xp += enemyUnitOne.xpAwarded;
+        inv.units[0].GetComponent<Unit>().checkLevel();
+        inv.units[0].GetComponent<Unit>().setValues();
+        inv.units[0].GetComponent<Unit>().currentHP = playerUnitOne.currentHP;
         yield return new WaitForSeconds(3f);
         mainCam.enabled = true;
         battleCam.enabled = false;

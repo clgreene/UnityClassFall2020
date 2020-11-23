@@ -7,6 +7,7 @@ public class BattleHud : MonoBehaviour
 {
 
     public Text nameText;
+    public Text levelText;
     public Slider health;
     public Slider mana;
     public Button moveOne;
@@ -19,6 +20,7 @@ public class BattleHud : MonoBehaviour
     public void SetHUD(Unit unit)
     {
         nameText.text = unit.unitName;
+        levelText.text = "LVL: " + unit.unitLevel;
         moveOne.onClick.AddListener(() => unit.moveOne());
         moveOneText.text = unit.moveOneSet;
         health.maxValue = unit.HP;
