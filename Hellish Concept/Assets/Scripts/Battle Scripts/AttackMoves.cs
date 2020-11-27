@@ -64,7 +64,35 @@ public class AttackMoves : MonoBehaviour
         BS.state = BattleState.NULL;
 
 
+    }
 
+    IEnumerator Smash()
+    {
+
+        if (BS.state == BattleState.PLAYERTURN) BS.playerUnitOneMana -= 70;
+        if (BS.state == BattleState.ENEMYTURN) BS.enemyUnitOneMana -= 70;
+
+        int damage = (BS.activeUnit.damage * 90) / 100;
+        BS.defendingUnit.currentHP -= ((damage * 40) / 100);
+        BS.enemyHudOne.SetHP(BS.enemyUnitOne);
+        BS.playerHudOne.SetHP(BS.playerUnitOne);
+        BS.dialogueText.text = BS.activeUnit.unitName + " Used Smash and dealt " + damage + " damage!";
+        BS.playerMoves.SetActive(false);
+
+        yield return new WaitForSeconds(2f);
+
+        BS.checkWin();
+        if (BS.state == BattleState.WON) BS.StartCoroutine("youWin"); // start function for win state
+        else if (BS.state == BattleState.LOST) BS.StartCoroutine("youLose"); // start function for loss state
+        else BS.state = BattleState.NULL;
+
+    }
+
+    IEnumerator SkeletalAI()
+    {
+
+
+        yield return new WaitForSeconds(2f);
 
     }
 
