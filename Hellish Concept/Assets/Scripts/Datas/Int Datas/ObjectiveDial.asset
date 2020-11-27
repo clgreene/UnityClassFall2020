@@ -9,12 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60507a9bc2add634599c5427564d7b6e, type: 3}
-  m_Name: HealerDial
+  m_Script: {fileID: 11500000, guid: 6414ee556a87d9549a075c191e23c6f5, type: 3}
+  m_Name: ObjectiveDial
   m_EditorClassIdentifier: 
-  stringList:
-  - F
-  - I can Heal and reincarnate your Hellspawns for you.
-  - Let me see them...
-  - You're Hellspawn are all Healed
-  - 
+  value: 0

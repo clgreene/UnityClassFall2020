@@ -11,6 +11,7 @@ public class SearchTrigger : MonoBehaviour
     public BoolData shovel;
 
     public IntData dial;
+    public IntData objDial;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -29,6 +30,7 @@ public class SearchTrigger : MonoBehaviour
                 shovel.value = true;
                 text.text = "You found a shovel";
                 dial.value = 3;
+                objDial.value = 4;
             }
 
             else text.text = "You didn't find anything";

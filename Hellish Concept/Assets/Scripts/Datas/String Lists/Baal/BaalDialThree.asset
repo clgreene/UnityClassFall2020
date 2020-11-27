@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BaalDialThree
   m_EditorClassIdentifier: 
   stringList:
-  - F
+  - ...F To Talk...
   - Alrighty, so you've got a shovel now I see. Well, time to start digging.
   - Your hellspawn will come out to fight as soon as you're attacked.
   - 'Just tell it what to do and you''ll be fine. '

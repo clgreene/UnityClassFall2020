@@ -13,6 +13,7 @@ public class BattleHud : MonoBehaviour
     public Button moveOne;
     public Text moveOneText;
     public Button moveTwo;
+    public Text moveTwoText;
     public Button moveThree;
 
     public BattleSystem BS;
@@ -23,6 +24,8 @@ public class BattleHud : MonoBehaviour
         levelText.text = "LVL: " + unit.unitLevel;
         moveOne.onClick.AddListener(() => unit.moveOne());
         moveOneText.text = unit.moveOneSet;
+        moveTwo.onClick.AddListener(() => unit.moveTwo());
+        moveTwoText.text = unit.moveTwoSet;
         health.maxValue = unit.HP;
         SetHP(unit);
         
@@ -36,6 +39,7 @@ public class BattleHud : MonoBehaviour
     public void SetEnemyHUD(Unit unit)
     {
         nameText.text = unit.unitName;
+        levelText.text = "LVL: " + unit.unitLevel;
         unit.setValues();
         unit.currentHP = unit.HP;
         health.maxValue = unit.HP;

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BallDialOne
   m_EditorClassIdentifier: 
   stringList:
-  - F
+  - ...F To Talk...
   - Another newly dead sinner. Welcome to Hell!
   - Wait a second... You're no mortal! You're the Prince of Hell!
   - Old Lucifer banished you here huh? Sounds like the Devil.
@@ -22,5 +22,5 @@ MonoBehaviour:
   - In order to do that, you're gonna need a beast, a Hellspawn.
   - As it so happens, I have a few right behind me in my shack.
   - Why don't you head in there an choose one.
-  - Once you've got one you think you like we'll go from there.
+  - Then come back and talk to me.
   - 

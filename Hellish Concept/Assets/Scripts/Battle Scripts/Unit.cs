@@ -51,7 +51,13 @@ public class Unit : MonoBehaviour
 
     public void moveTwo()
     {
+        if (BS.state != BattleState.PLAYERTURN || BS.state != BattleState.ENEMYTURN)
+        {
+            BS.dialogueText.text = "Your Hellspawn isn't ready to attack!";
 
+        }
+
+        attacks.StartCoroutine(moveTwoSet);
     }
 
     public void moveThree()
@@ -82,7 +88,7 @@ public class Unit : MonoBehaviour
     {
         HP = baseHP + (unitLevel * 2);
         currentHP += baseHP + (unitLevel * 2);
-        damage = baseDamage + unitLevel;
+        damage = baseDamage + (unitLevel * 2);
         xpAwarded = unitLevel;
 
     }
@@ -90,22 +96,6 @@ public class Unit : MonoBehaviour
     public void resetValues()
     {
         currentHP = HP;
-    }
-
-    public void attackOne()
-    {
-
-    }
-
-
-    public void typeOneMonster()
-    {
-        
-    }
-
-    public void typeTwoMonster()
-    {
-
     }
 
 }

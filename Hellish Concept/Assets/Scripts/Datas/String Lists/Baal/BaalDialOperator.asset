@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BaalDialOperator
   m_EditorClassIdentifier: 
   dialogue: {fileID: 11400000, guid: dbc03dc1dd3b63a41a575b6447428925, type: 2}
-  currentList: {fileID: 0}
+  currentList: {fileID: 11400000, guid: acb919a6fafa83a4eb43250e27bc9ad2, type: 2}
   listOne: {fileID: 11400000, guid: 35528e5dd9694c544981a37cbbe08dce, type: 2}
   listTwo: {fileID: 11400000, guid: acb919a6fafa83a4eb43250e27bc9ad2, type: 2}
   listThree: {fileID: 11400000, guid: b32a7372db5191e4e8027b9408d360c0, type: 2}
@@ -23,3 +23,7 @@ MonoBehaviour:
   listSeven: {fileID: 0}
   listEight: {fileID: 0}
   listNine: {fileID: 0}
+  objDial: {fileID: 11400000, guid: 65bd7a179c9092249ba69a5a04fd8fcb, type: 2}
+  taskOne: 1
+  taskTwo: 3
+  taskThree: 5

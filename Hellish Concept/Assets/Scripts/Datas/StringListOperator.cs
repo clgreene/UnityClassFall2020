@@ -24,8 +24,12 @@ public class StringListOperator : ScriptableObject
     public StringListData listNine;
 
     //establishing a returnValue string for dialogue statements, and an integer that will cycle through all statements in a single dialogue option
-    private string returnValue;
+    public string returnValue;
     private int i;
+    public IntData objDial;
+    public int taskOne;
+    public int taskTwo;
+    public int taskThree;
 
     //Logic for which dialogue option is loaded via switch statement
     public void SetStringList()
@@ -63,6 +67,11 @@ public class StringListOperator : ScriptableObject
 
     }
 
+    public void FindNextString()
+    {
+        returnValue = currentList.stringList[dialogue.value];  
+    }
+
     //setting canvas text to return Value text
     public void SetTextUIToValue(Text obj)
     {
@@ -74,6 +83,13 @@ public class StringListOperator : ScriptableObject
     {
         obj.text = null;
         i = 0;
+    }
+
+    public void UpdateObj()
+    {
+        if (objDial.value == 0) objDial.value = taskOne;
+        else if (objDial.value == 2) objDial.value = taskTwo;
+        else if (objDial.value == 4) objDial.value = taskThree;
     }
 
 }

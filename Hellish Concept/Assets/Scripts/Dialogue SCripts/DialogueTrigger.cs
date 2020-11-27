@@ -12,8 +12,9 @@ public class DialogueTrigger : MonoBehaviour
 	//establishing Unity Events for dialogue events
 	public UnityEvent TriggerCycleEvent, TriggerUpdateEvent, TriggerExitEvent, TriggerSetEvent;
 	public bool playerNear;
+	public StringListOperator currentDialogue;
 
-
+	public Inventory inv;
 
 	//Setting the correct dialogue for where you're at in the game.
 	private void OnTriggerEnter(Collider other)
@@ -40,6 +41,8 @@ public class DialogueTrigger : MonoBehaviour
 		{
 			playerNear = true;
 		}
+
+		if (currentDialogue.returnValue == "You're Hellspawn are all Healed") inv.units[0].GetComponent<Unit>().currentHP = inv.units[0].GetComponent<Unit>().HP;
 	}
 
 

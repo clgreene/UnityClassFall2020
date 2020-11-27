@@ -20,6 +20,8 @@ public class HellSpawnPickkup : MonoBehaviour
     public IntData dial;
     public int nextDial;
 
+    public IntData objDial;
+
     private void Start()
     {
         inv = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
@@ -46,6 +48,7 @@ public class HellSpawnPickkup : MonoBehaviour
                 Object.Destroy(gameObject);
                 dial.value = nextDial;
                 text.text = "You obtained a Hellspawn.";
+                objDial.value = 2;
                 resetText();
             }
 

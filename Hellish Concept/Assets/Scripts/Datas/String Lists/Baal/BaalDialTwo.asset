@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: BaalDialTwo
   m_EditorClassIdentifier: 
   stringList:
-  - F
+  - ...F To Talk...
   - Great, now that you have your own hellspawn you need a monster to fight.
   - There are some monsters right here, only problem is they're all underground.
-  - You'll need a shovel to get at them, why do you go search the town for a shovel.
+  - You're going to need to shovel to fight any of them. I know someone in town owns
+    one.
+  - Go search their houses just east of here, don't worry, they aren't going to care.
   - 
