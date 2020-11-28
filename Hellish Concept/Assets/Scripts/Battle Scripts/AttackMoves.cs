@@ -8,6 +8,7 @@ public class AttackMoves : MonoBehaviour
     public int damage;
     public int HP;
     public BattleSystem BS;
+    public string lastAttack;
 
     // Start is called before the first frame update
     void Start()
@@ -34,14 +35,12 @@ public class AttackMoves : MonoBehaviour
 
         yield return new WaitForSeconds(2f);
 
+        lastAttack = "Bite";
         BS.checkWin();
         if (BS.state == BattleState.WON) BS.StartCoroutine("youWin"); // start function for win state
         else if (BS.state == BattleState.LOST) BS.StartCoroutine("youLose"); // start function for loss state
         else BS.state = BattleState.NULL;
 
-
-
-        
         
     }
 
@@ -61,6 +60,7 @@ public class AttackMoves : MonoBehaviour
 
         yield return new WaitForSeconds(2f);
 
+        lastAttack = "LickWounds";
         BS.state = BattleState.NULL;
 
 
@@ -81,6 +81,7 @@ public class AttackMoves : MonoBehaviour
 
         yield return new WaitForSeconds(2f);
 
+        lastAttack = "Smash";
         BS.checkWin();
         if (BS.state == BattleState.WON) BS.StartCoroutine("youWin"); // start function for win state
         else if (BS.state == BattleState.LOST) BS.StartCoroutine("youLose"); // start function for loss state
@@ -88,8 +89,61 @@ public class AttackMoves : MonoBehaviour
 
     }
 
+    IEnumerator Regrowth()
+    {
+
+        if (BS.state == BattleState.PLAYERTURN) BS.playerUnitOneMana -= 15;
+        if (BS.state == BattleState.ENEMYTURN) BS.enemyUnitOneMana -= 15;
+
+        int health = BS.activeUnit.HP / 6;
+        BS.activeUnit.currentHP += health;
+        BS.enemyHudOne.SetHP(BS.enemyUnitOne);
+        BS.playerHudOne.SetHP(BS.playerUnitOne);
+        if (BS.activeUnit.currentHP > BS.activeUnit.HP) BS.activeUnit.currentHP = BS.activeUnit.HP;
+        BS.dialogueText.text = BS.activeUnit.unitName + " regrew itself and recovered " + health + " hitpoints";
+        BS.playerMoves.SetActive(false);
+
+        yield return new WaitForSeconds(2f);
+
+        lastAttack = "Regrowth";
+        BS.state = BattleState.NULL;
+
+    }
+
+    IEnumerator Growl()
+    {
+        if (lastAttack != "Growl")
+        {
+            if (BS.state == BattleState.PLAYERTURN)
+            {
+                BS.playerUnitOneMana -= 10;
+                BS.enemyUnitOneMana -= 20;
+
+            }
+            if (BS.state == BattleState.ENEMYTURN)
+            {
+                BS.enemyUnitOneMana -= 10;
+                BS.playerUnitOneMana -= 20;
+            }
+
+            BS.activeUnit.damage -= 1;
+            BS.dialogueText.text = BS.activeUnit.unitName + "Growls, it's opponent staggers. " + BS.activeUnit.unitName + " attack decreases.";
+
+            yield return new WaitForSeconds(2f);
+        }
+
+        else BS.dialogueText.text = BS.activeUnit.unitName + " can't growl twice in a row!";
+    }
+
     IEnumerator SkeletalAI()
     {
+        if (BS.defendingUnit.currentHP <= 10 && lastAttack != "Regrowth")
+        {
+            Regrowth();
+
+        }
+
+        else Bite();
 
 
         yield return new WaitForSeconds(2f);
