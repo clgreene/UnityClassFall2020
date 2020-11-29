@@ -15,6 +15,7 @@ public class BattleHud : MonoBehaviour
     public Button moveTwo;
     public Text moveTwoText;
     public Button moveThree;
+    public Text moveThreeText;
 
     public BattleSystem BS;
 
@@ -26,6 +27,8 @@ public class BattleHud : MonoBehaviour
         moveOneText.text = unit.moveOneSet;
         moveTwo.onClick.AddListener(() => unit.moveTwo());
         moveTwoText.text = unit.moveTwoSet;
+        moveThree.onClick.AddListener(() => unit.moveThree());
+        moveThreeText.text = unit.moveThreeSet;
         health.maxValue = unit.HP;
         SetHP(unit);
         
@@ -56,6 +59,8 @@ public class BattleHud : MonoBehaviour
     {
 
         moveOne.onClick.RemoveAllListeners();
+        moveTwo.onClick.RemoveAllListeners();
+        moveThree.onClick.RemoveAllListeners();
     }
 
 }

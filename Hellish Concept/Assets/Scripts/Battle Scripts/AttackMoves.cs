@@ -27,7 +27,7 @@ public class AttackMoves : MonoBehaviour
 
 
         int damage = (BS.activeUnit.damage * 40) / 100;
-        BS.defendingUnit.currentHP -= ((damage * 40) / 100);
+        BS.defendingUnit.currentHP -= damage;
         BS.enemyHudOne.SetHP(BS.enemyUnitOne);
         BS.playerHudOne.SetHP(BS.playerUnitOne);
         BS.dialogueText.text = BS.activeUnit.unitName + " Used Bite and dealt " + damage + " damage!";
@@ -130,6 +130,8 @@ public class AttackMoves : MonoBehaviour
             BS.dialogueText.text = BS.activeUnit.unitName + "Growls, it's opponent staggers. " + BS.activeUnit.unitName + " attack decreases.";
 
             yield return new WaitForSeconds(2f);
+
+            BS.state = BattleState.NULL;
         }
 
         else BS.dialogueText.text = BS.activeUnit.unitName + " can't growl twice in a row!";

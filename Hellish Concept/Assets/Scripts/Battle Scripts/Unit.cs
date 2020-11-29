@@ -62,7 +62,13 @@ public class Unit : MonoBehaviour
 
     public void moveThree()
     {
+        if (BS.state != BattleState.PLAYERTURN || BS.state != BattleState.ENEMYTURN)
+        {
+            BS.dialogueText.text = "Your Hellspawn isn't ready to attack!";
 
+        }
+
+        attacks.StartCoroutine(moveThreeSet);
     }
 
     private int[] xpLevels = new int[] 

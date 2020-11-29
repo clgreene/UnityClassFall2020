@@ -5488,12 +5488,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 242497492}
-  m_LocalRotation: {x: -0, y: 0.664045, z: -0, w: 0.74769264}
-  m_LocalPosition: {x: -51.44, y: -6.2140007, z: 53.47}
-  m_LocalScale: {x: 2.4657, y: 1, z: 2.7331}
+  m_LocalRotation: {x: -0, y: 0.34859398, z: -0, w: 0.93727386}
+  m_LocalPosition: {x: -4.5629425, y: -11.680239, z: 15.463692}
+  m_LocalScale: {x: 2.4656997, y: 1, z: 2.7331}
   m_Children: []
-  m_Father: {fileID: 1283300749}
-  m_RootOrder: 8
+  m_Father: {fileID: 858239970}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 83.218, z: 0}
 --- !u!114 &242497494
 MonoBehaviour:
@@ -11619,7 +11619,7 @@ MonoBehaviour:
   BS: {fileID: 786810089}
   battleEnemy: {fileID: 4767779951288982540, guid: 7dc443dab216f8143acc5cef22650c26,
     type: 3}
-  xp: 50
+  xp: 25
 --- !u!65 &515520206
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12658,7 +12658,7 @@ MonoBehaviour:
   BS: {fileID: 786810089}
   battleEnemy: {fileID: 4767779951288982540, guid: 7dc443dab216f8143acc5cef22650c26,
     type: 3}
-  xp: 55
+  xp: 25
 --- !u!65 &555756261
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15052,6 +15052,7 @@ MonoBehaviour:
   moveTwo: {fileID: 0}
   moveTwoText: {fileID: 0}
   moveThree: {fileID: 0}
+  moveThreeText: {fileID: 0}
   BS: {fileID: 786810089}
 --- !u!224 &720558143
 RectTransform:
@@ -16790,7 +16791,8 @@ MonoBehaviour:
   moveOneText: {fileID: 1570609297}
   moveTwo: {fileID: 177586409}
   moveTwoText: {fileID: 2036857902}
-  moveThree: {fileID: 0}
+  moveThree: {fileID: 1568812088}
+  moveThreeText: {fileID: 551246494}
   BS: {fileID: 0}
 --- !u!114 &786810089
 MonoBehaviour:
@@ -16842,6 +16844,7 @@ MonoBehaviour:
   damage: 0
   HP: 0
   BS: {fileID: 0}
+  lastAttack: 
 --- !u!1 &787501141
 GameObject:
   m_ObjectHideFlags: 0
@@ -19595,6 +19598,7 @@ Transform:
   m_LocalPosition: {x: -155.22945, y: 11.680239, z: 12.885349}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 242497493}
   - {fileID: 1865359071}
   m_Father: {fileID: 0}
   m_RootOrder: 13
@@ -23658,7 +23662,7 @@ MonoBehaviour:
   BS: {fileID: 786810089}
   battleEnemy: {fileID: 4767779951288982540, guid: 7dc443dab216f8143acc5cef22650c26,
     type: 3}
-  xp: 68
+  xp: 45
 --- !u!65 &1054983306
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28752,7 +28756,6 @@ Transform:
   - {fileID: 2046940704}
   - {fileID: 1421816947}
   - {fileID: 1366960448}
-  - {fileID: 242497493}
   m_Father: {fileID: 2133750346}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -30661,7 +30664,7 @@ MonoBehaviour:
   BS: {fileID: 786810089}
   battleEnemy: {fileID: 4767779951288982540, guid: 7dc443dab216f8143acc5cef22650c26,
     type: 3}
-  xp: 40
+  xp: 25
 --- !u!65 &1366960450
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32241,7 +32244,7 @@ MonoBehaviour:
   BS: {fileID: 786810089}
   battleEnemy: {fileID: 4767779951288982540, guid: 7dc443dab216f8143acc5cef22650c26,
     type: 3}
-  xp: 55
+  xp: 25
 --- !u!65 &1421816949
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32853,7 +32856,7 @@ MonoBehaviour:
   currentHP: 0
   moveOneSet: Bite
   moveTwoSet: LickWounds
-  moveThreeSet: 
+  moveThreeSet: Growl
   attacks: {fileID: 0}
   BS: {fileID: 0}
 --- !u!23 &1454373939
@@ -41138,7 +41141,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 858239970}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -4.8760004, y: -95.26, z: 0}
 --- !u!81 &1865359072
 AudioListener:
@@ -42973,7 +42976,7 @@ MonoBehaviour:
   BS: {fileID: 786810089}
   battleEnemy: {fileID: 4767779951288982540, guid: 7dc443dab216f8143acc5cef22650c26,
     type: 3}
-  xp: 40
+  xp: 25
 --- !u!1 &1983424471
 GameObject:
   m_ObjectHideFlags: 0
@@ -44666,7 +44669,7 @@ MonoBehaviour:
   BS: {fileID: 786810089}
   battleEnemy: {fileID: 4767779951288982540, guid: 7dc443dab216f8143acc5cef22650c26,
     type: 3}
-  xp: 55
+  xp: 25
 --- !u!65 &2046940706
 BoxCollider:
   m_ObjectHideFlags: 0

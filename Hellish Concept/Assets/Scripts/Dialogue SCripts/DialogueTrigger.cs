@@ -41,8 +41,11 @@ public class DialogueTrigger : MonoBehaviour
 		{
 			playerNear = true;
 		}
+		if (!(inv is null))
+		{
+			if (currentDialogue.returnValue == "You're Hellspawn are all Healed") inv.units[0].GetComponent<Unit>().currentHP = inv.units[0].GetComponent<Unit>().HP;
 
-		if (currentDialogue.returnValue == "You're Hellspawn are all Healed") inv.units[0].GetComponent<Unit>().currentHP = inv.units[0].GetComponent<Unit>().HP;
+		}
 	}
 
 
