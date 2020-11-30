@@ -34,7 +34,7 @@ public class AttackMoves : MonoBehaviour
         BS.dialogueText.text = BS.activeUnit.unitName + " Used Bite and dealt " + damage + " damage!";
         BS.playerMoves.SetActive(false);
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
 
         lastAttack = "Bite";
         StartCoroutine(BS.checkDamage());
@@ -60,7 +60,7 @@ public class AttackMoves : MonoBehaviour
         BS.dialogueText.text = BS.activeUnit.unitName + " Licked it's wounds and recovered " + health + " hitpoints";
         BS.playerMoves.SetActive(false);
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
 
         lastAttack = "LickWounds";
         StartCoroutine(BS.checkDamage());
@@ -83,7 +83,7 @@ public class AttackMoves : MonoBehaviour
         BS.dialogueText.text = BS.activeUnit.unitName + " Used Smash and dealt " + damage + " damage!";
         BS.playerMoves.SetActive(false);
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
 
         lastAttack = "Smash";
         StartCoroutine(BS.checkDamage());
@@ -108,7 +108,7 @@ public class AttackMoves : MonoBehaviour
         BS.dialogueText.text = BS.activeUnit.unitName + " regrew itself and recovered " + health + " hitpoints";
         BS.playerMoves.SetActive(false);
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
 
         lastAttack = "Regrowth";
         StartCoroutine(BS.checkDamage());
@@ -136,7 +136,7 @@ public class AttackMoves : MonoBehaviour
             BS.activeUnit.damage -= 1;
             BS.dialogueText.text = BS.activeUnit.unitName + "Growls, it's opponent staggers. " + BS.activeUnit.unitName + " attack decreases.";
 
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(3f);
             StartCoroutine(BS.checkDamage());
             BS.checkWin();
             BS.state = BattleState.NULL;
@@ -167,7 +167,7 @@ public class AttackMoves : MonoBehaviour
         BS.dialogueText.text = BS.activeUnit.unitName + " Possessed it's enemy and dealt " + damage + " damage and " + (damage / 4) + " to itself.";
         BS.playerMoves.SetActive(false);
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
 
         lastAttack = "Possess";
         StartCoroutine(BS.checkDamage());
@@ -199,13 +199,13 @@ public class AttackMoves : MonoBehaviour
         BS.enemyHudOne.SetHP(BS.enemyUnitOne);
         BS.playerHudOne.SetHP(BS.playerUnitOne);
         BS.dialogueText.text = BS.activeUnit.unitName + " haunts it's enemy...";
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
         StartCoroutine(BS.checkDamage());
+        yield return new WaitForSeconds(3f);
         BS.checkWin();
         if (BS.state == BattleState.WON) BS.StartCoroutine("youWin"); // start function for win state
         else if (BS.state == BattleState.LOST) BS.StartCoroutine("youLose"); // start function for loss state
         else BS.state = BattleState.NULL;
-
 
     }
 
@@ -227,15 +227,8 @@ public class AttackMoves : MonoBehaviour
         if (BS.activeUnit.currentHP <= 10 && lastAttack != "Regrowth")
         {
             StartCoroutine(Regrowth());
-
         }
 
         else StartCoroutine(Bite());
-
-
     }
-
-
-    
-    
 }

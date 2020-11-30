@@ -103,8 +103,6 @@ public class BattleSystem : MonoBehaviour
         
     }
 
-    
-
     IEnumerator SetupBattle()
     {
         //setting all speed checkers to 0
@@ -136,7 +134,6 @@ public class BattleSystem : MonoBehaviour
 
         //change dialogue text
         //dialogueText.text = "Kill it with fire!";
-
 
         StartCoroutine(SetupHUD());
         //change battle state and start next function
@@ -211,7 +208,6 @@ public class BattleSystem : MonoBehaviour
                 dialogueText.text = playerUnitOne.unitName + " takes damage from " + dotAttackPlayer;
                 yield return new WaitForSeconds(2f);
             }
-
         }
         yield return new WaitForSeconds(2f);
     }
@@ -220,8 +216,5 @@ public class BattleSystem : MonoBehaviour
     {
         yield return new WaitForSeconds(3f);
     }
-     
-
-
 
 }
