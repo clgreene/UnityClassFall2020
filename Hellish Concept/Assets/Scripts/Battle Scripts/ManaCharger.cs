@@ -52,7 +52,7 @@ public class ManaCharger : MonoBehaviour
                 BS.activeUnit = BS.enemyUnitOne;
                 BS.defendingUnit = BS.playerUnitOne;
                 BS.state = BattleState.ENEMYTURN;
-                BS.activeUnit.moveOne();
+                BS.activeUnit.AI();
             }
         }
         

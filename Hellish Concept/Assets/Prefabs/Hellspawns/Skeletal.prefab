@@ -44,21 +44,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unitName: Skeletal
-  unitLevel: 7
-  xp: 40
-  xpAwarded: 7
+  unitLevel: 5
+  xp: 25
+  xpAwarded: 5
   unitSprite: {fileID: 0}
   baseDamage: 11
-  damage: 24
+  damage: 21
   armor: 0
   baseHP: 12
-  HP: 26
+  HP: 22
   baseMana: 0
   mana: 0
   manaChargeRate: 45
-  currentHP: 344
-  moveOneSet: Bite
+  currentHP: 476
+  moveOneSet: 
   moveTwoSet: 
   moveThreeSet: 
   attacks: {fileID: 0}
+  enemyAI: {fileID: 0}
   BS: {fileID: 0}

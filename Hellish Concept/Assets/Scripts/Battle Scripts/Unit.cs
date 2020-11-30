@@ -28,7 +28,8 @@ public class Unit : MonoBehaviour
     public string moveTwoSet;
     public string moveThreeSet;
 
-    public MonoBehaviour attacks;
+    public AttackMoves attacks;
+    public AttackMoves enemyAI;
 
     public BattleSystem BS;
 
@@ -69,6 +70,11 @@ public class Unit : MonoBehaviour
         }
 
         attacks.StartCoroutine(moveThreeSet);
+    }
+
+    public void AI()
+    {
+        attacks.StartCoroutine(unitName);
     }
 
     private int[] xpLevels = new int[] 

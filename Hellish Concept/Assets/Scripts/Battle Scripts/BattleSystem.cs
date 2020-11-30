@@ -82,6 +82,15 @@ public class BattleSystem : MonoBehaviour
     public GameObject playerGO;
     public GameObject enemyGO;
 
+
+    public int damageOverTimePlayer;
+    public int overTimeCounterPlayer;
+    public int damageOverTimeEnemy;
+    public int overTimeCounterEnemy;
+    public string dotAttackPlayer;
+    public string dotAttackEnemy;
+
+
     //Start the SetupBattle Coroutine that will set up all our variables and sprites for our battle.
     public void StartBattle()
     {
@@ -178,6 +187,33 @@ public class BattleSystem : MonoBehaviour
         Object.Destroy(enemyGO);
         playerHudOne.closeHUD();
         battleUI.SetActive(false);
+    }
+
+    public IEnumerator checkDamage()
+    {
+        if (state == BattleState.PLAYERTURN)
+        {
+            if (overTimeCounterEnemy != 0)
+            {
+                overTimeCounterEnemy -= 1;
+                enemyUnitOne.currentHP -= damageOverTimeEnemy;
+                dialogueText.text = enemyUnitOne.unitName + " takes damage from " + dotAttackEnemy;
+                yield return new WaitForSeconds(2f);
+            }
+        }
+
+        else if (state == BattleState.ENEMYTURN)
+        {
+            if (overTimeCounterPlayer != 0)
+            {
+                overTimeCounterPlayer -= 1;
+                playerUnitOne.currentHP -= damageOverTimePlayer;
+                dialogueText.text = playerUnitOne.unitName + " takes damage from " + dotAttackPlayer;
+                yield return new WaitForSeconds(2f);
+            }
+
+        }
+        yield return new WaitForSeconds(2f);
     }
 
     IEnumerator wait()
