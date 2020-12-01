@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue: {fileID: 11400000, guid: f0178581d1e8cad42875fc2f35cc9516, type: 2}
   dialogueBranch: {fileID: 11400000, guid: fc6bf052f1f1de54e83183181093f2df, type: 2}
-  currentList: {fileID: 11400000, guid: 60611d66880c2134f81521ebe866cbc1, type: 2}
+  currentList: {fileID: 11400000, guid: bfea24176647bf34cacfdf8152d18088, type: 2}
   currentSpeaker: {fileID: 11400000, guid: 60611d66880c2134f81521ebe866cbc1, type: 2}
   stringLists:
   - {fileID: 11400000, guid: 60611d66880c2134f81521ebe866cbc1, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: bfea24176647bf34cacfdf8152d18088, type: 2}
+  - {fileID: 11400000, guid: 39ddc0977f35c9548baddde663cd5e82, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -28,4 +28,4 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   dialogueString: 
-  speakerString: 
+  speakerString: You

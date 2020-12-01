@@ -12,12 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e6d255db0f6e0c44b5c88baffe114e1, type: 3}
   m_Name: BeckyBranch1
   m_EditorClassIdentifier: 
-  dialogueList: []
-  speakerList: []
+  dialogueList:
+  - How often does this happen?
+  - I don't know, it seems to happen at least once every one or two weeks.
+  - And is it always an entire day, or different amounts of time?
+  - It can be a few hours, or it can be a few days, like an entire weekend.
+  - Well that's no good.
+  - What can I do?
+  - 
+  speakerList:
+  - you
+  - Becky
+  - you
+  - Becky
+  - You
+  - Becky
+  - You
   buttonManager: {fileID: 0}
-  buttonOneString: 
-  buttonTwoString: 
-  branchOne: 0
-  branchTwo: 0
-  branchInt: {fileID: 0}
-  dialogueInt: {fileID: 0}
+  buttonOneString: Record yourself everyday with a GoPro.
+  buttonTwoString: Create a rigid schedule for yourself.
+  branchOne: 3
+  branchTwo: 4
+  branchInt: {fileID: 11400000, guid: fc6bf052f1f1de54e83183181093f2df, type: 2}
+  dialogueInt: {fileID: 11400000, guid: f0178581d1e8cad42875fc2f35cc9516, type: 2}

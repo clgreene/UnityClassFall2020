@@ -12,8 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e6d255db0f6e0c44b5c88baffe114e1, type: 3}
   m_Name: BeckyBranch2
   m_EditorClassIdentifier: 
-  dialogueList: []
-  speakerList: []
+  dialogueList:
+  - Do you drink alcohol or do any drugs, legal or illegal? Don't worry, you have
+    doctor/patient confidentiality.
+  - I smoke a little weed here and there, and I drink but never get blackout drunk.
+  - Have you noticed your memory lapses coinciding with weed or alcohol usage?
+  - I haven't paid attention to it.
+  - Start paying attention, write down the date and time whenever you smoke or drink.
+  - And that will help?
+  - That will help us narrow down what it could be.
+  - And then what?
+  - And then come back in a couple weeks and check up and we'll see where we're at.
+  speakerList:
+  - You
+  - Becky
+  - You
+  - Becky
+  - You
+  - Becky
+  - You
+  - Becky
+  - You
   buttonManager: {fileID: 0}
   buttonOneString: 
   buttonTwoString: 
