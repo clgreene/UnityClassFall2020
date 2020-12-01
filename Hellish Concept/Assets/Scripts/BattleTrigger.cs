@@ -52,6 +52,8 @@ public class BattleTrigger : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F) && other.gameObject.CompareTag("Player") && shovel.value == true && !battleUI.activeSelf)
         {
+            BS.battleCam = cam2;
+            
             cam1.enabled = false;
             cam2.enabled = true;
             battleUI.SetActive(true);

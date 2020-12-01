@@ -101,7 +101,7 @@ public class Unit : MonoBehaviour
         HP = baseHP + (unitLevel * 2);
         currentHP += baseHP + (unitLevel * 2);
         damage = baseDamage + (unitLevel * 2);
-        xpAwarded = unitLevel;
+        xpAwarded = unitLevel + 3;
 
     }
 

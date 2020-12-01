@@ -2478,6 +2478,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 400a7dab09cf9b541ab7724877945c89, type: 3}
+--- !u!1 &130251028
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 130251029}
+  - component: {fileID: 130251031}
+  - component: {fileID: 130251030}
+  m_Layer: 0
+  m_Name: LeechTrigger (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &130251029
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 130251028}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -8.94, y: 43.412476, z: -59.07}
+  m_LocalScale: {x: 1.9436998, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 880930353}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &130251030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 130251028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 596fa8ec7291c284ca45b05dec4e6ab5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionText: {fileID: 1674396153}
+  SS: {fileID: 394595329}
+  shovel: {fileID: 11400000, guid: d35c3eb9227c87c45a5f6a64b92f03c1, type: 2}
+  scene: 1
+  text: Dig?
+  cam1: {fileID: 963194227}
+  cam2: {fileID: 152044976}
+  battleUI: {fileID: 1992310514}
+  BS: {fileID: 786810089}
+  battleEnemy: {fileID: 469032598281122521, guid: 9e880a817a9920244b5663d71dc0c71d,
+    type: 3}
+  xp: 25
+--- !u!65 &130251031
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 130251028}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.696331, y: 1.9669361, z: 3.5819836}
+  m_Center: {x: -0.025362015, y: 0.48346806, z: 0.5022688}
 --- !u!1001 &130982005
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3160,6 +3229,89 @@ Transform:
   m_Father: {fileID: 513153614}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &152044973
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 152044974}
+  - component: {fileID: 152044976}
+  - component: {fileID: 152044975}
+  m_Layer: 0
+  m_Name: RockCamera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &152044974
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152044973}
+  m_LocalRotation: {x: 0.01321912, y: -0.9399057, z: 0.14367566, w: 0.30945104}
+  m_LocalPosition: {x: 7.315262, y: 48.37871, z: -53.36789}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 880930353}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 16.157001, y: -143.01001, z: 3.8250003}
+--- !u!81 &152044975
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152044973}
+  m_Enabled: 0
+--- !u!20 &152044976
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152044973}
+  m_Enabled: 0
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
 --- !u!1 &152623429 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: e381ff5030642f14ca88a55d1e2de6f4,
@@ -5513,12 +5665,12 @@ MonoBehaviour:
   scene: 1
   text: Enter Cave?
   cam1: {fileID: 963194227}
-  cam2: {fileID: 1651125244}
+  cam2: {fileID: 1865359073}
   battleUI: {fileID: 1992310514}
   BS: {fileID: 786810089}
-  battleEnemy: {fileID: 4767779951288982540, guid: 7dc443dab216f8143acc5cef22650c26,
+  battleEnemy: {fileID: 2862378459823294526, guid: 465748cc1cce13c4595e0e5ba9c167c1,
     type: 3}
-  xp: 50
+  xp: 100
 --- !u!65 &242497495
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6223,6 +6375,75 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1004935402}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &269579774
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 269579775}
+  - component: {fileID: 269579777}
+  - component: {fileID: 269579776}
+  m_Layer: 0
+  m_Name: LeechTrigger (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &269579775
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269579774}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -12.28, y: 43.412476, z: -53.13}
+  m_LocalScale: {x: 2.6585927, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 880930353}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &269579776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269579774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 596fa8ec7291c284ca45b05dec4e6ab5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionText: {fileID: 1674396153}
+  SS: {fileID: 394595329}
+  shovel: {fileID: 11400000, guid: d35c3eb9227c87c45a5f6a64b92f03c1, type: 2}
+  scene: 1
+  text: Dig?
+  cam1: {fileID: 963194227}
+  cam2: {fileID: 152044976}
+  battleUI: {fileID: 1992310514}
+  BS: {fileID: 786810089}
+  battleEnemy: {fileID: 469032598281122521, guid: 9e880a817a9920244b5663d71dc0c71d,
+    type: 3}
+  xp: 35
+--- !u!65 &269579777
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269579774}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.696331, y: 1.9669361, z: 3.5819836}
+  m_Center: {x: -0.025362015, y: 0.48346806, z: 0.5022688}
 --- !u!1 &270660101
 GameObject:
   m_ObjectHideFlags: 0
@@ -20047,6 +20268,41 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 902773831}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &880930352
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 880930353}
+  m_Layer: 0
+  m_Name: LeechBattle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &880930353
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 880930352}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -112.244705, y: -39.998474, z: 77.85324}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 152044974}
+  - {fileID: 1000020899}
+  - {fileID: 1559851251}
+  - {fileID: 130251029}
+  - {fileID: 269579775}
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &882905650
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22404,6 +22660,75 @@ Transform:
   m_Father: {fileID: 513153614}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1000020898
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1000020899}
+  - component: {fileID: 1000020901}
+  - component: {fileID: 1000020900}
+  m_Layer: 0
+  m_Name: LeechTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1000020899
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000020898}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.0743713, y: 43.412476, z: -61.00895}
+  m_LocalScale: {x: 1.9436998, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 880930353}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1000020900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000020898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 596fa8ec7291c284ca45b05dec4e6ab5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionText: {fileID: 1674396153}
+  SS: {fileID: 394595329}
+  shovel: {fileID: 11400000, guid: d35c3eb9227c87c45a5f6a64b92f03c1, type: 2}
+  scene: 1
+  text: Dig?
+  cam1: {fileID: 963194227}
+  cam2: {fileID: 152044976}
+  battleUI: {fileID: 1992310514}
+  BS: {fileID: 786810089}
+  battleEnemy: {fileID: 469032598281122521, guid: 9e880a817a9920244b5663d71dc0c71d,
+    type: 3}
+  xp: 25
+--- !u!65 &1000020901
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000020898}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.696331, y: 1.9669361, z: 3.5819836}
+  m_Center: {x: -0.025362015, y: 0.48346806, z: 0.5022688}
 --- !u!1001 &1000026993
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26324,8 +26649,8 @@ Transform:
   m_Father: {fileID: 831196418}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: -1.033, z: 0}
---- !u!135 &1163519667
-SphereCollider:
+--- !u!65 &1163519667
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -26335,8 +26660,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: -0.0000038146973, y: 0, z: 0.00000047683716}
 --- !u!23 &1163519668
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -35642,6 +35967,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1556634290}
   m_CullTransparentMesh: 0
+--- !u!1 &1559851250
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1559851251}
+  - component: {fileID: 1559851253}
+  - component: {fileID: 1559851252}
+  m_Layer: 0
+  m_Name: LeechTrigger (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1559851251
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1559851250}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 8.9, y: 43.412476, z: -63.86}
+  m_LocalScale: {x: 1.9436998, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 880930353}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1559851252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1559851250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 596fa8ec7291c284ca45b05dec4e6ab5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionText: {fileID: 1674396153}
+  SS: {fileID: 394595329}
+  shovel: {fileID: 11400000, guid: d35c3eb9227c87c45a5f6a64b92f03c1, type: 2}
+  scene: 1
+  text: Dig?
+  cam1: {fileID: 963194227}
+  cam2: {fileID: 152044976}
+  battleUI: {fileID: 1992310514}
+  BS: {fileID: 786810089}
+  battleEnemy: {fileID: 469032598281122521, guid: 9e880a817a9920244b5663d71dc0c71d,
+    type: 3}
+  xp: 35
+--- !u!65 &1559851253
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1559851250}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.696331, y: 1.9669361, z: 3.5819836}
+  m_Center: {x: -0.025362015, y: 0.48346806, z: 0.5022688}
 --- !u!1001 &1560039238
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41137,7 +41531,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1865359071
 Transform:
   m_ObjectHideFlags: 0

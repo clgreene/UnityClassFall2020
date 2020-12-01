@@ -145,7 +145,7 @@ public class BattleSystem : MonoBehaviour
     {
         playerHudOne.SetHUD(playerUnitOne);
         enemyHudOne.SetEnemyHUD(enemyUnitOne);
-        dialogueText.text = "A " + enemyUnitOne.unitName + "Is attacking!";
+        dialogueText.text = "A " + enemyUnitOne.unitName + " Is attacking!";
         yield return new WaitForSeconds(0f);
     }
 

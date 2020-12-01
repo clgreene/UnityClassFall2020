@@ -210,7 +210,38 @@ public class AttackMoves : MonoBehaviour
     }
 
 
+    IEnumerator SuckBlood()
+    {
+        if (BS.state == BattleState.PLAYERTURN)
+        {
+            BS.playerUnitOneMana -= 25;
 
+        }
+        if (BS.state == BattleState.ENEMYTURN)
+        {
+            BS.enemyUnitOneMana -= 25;
+
+        }
+
+        int damage = (BS.activeUnit.damage * 20) / 100;
+        BS.defendingUnit.currentHP -= damage;
+        BS.activeUnit.currentHP += (damage / 2);
+        if (BS.activeUnit.currentHP > BS.activeUnit.HP) BS.activeUnit.currentHP = BS.activeUnit.HP;
+        BS.enemyHudOne.SetHP(BS.enemyUnitOne);
+        BS.playerHudOne.SetHP(BS.playerUnitOne);
+        BS.dialogueText.text = BS.activeUnit.unitName + " sucks blood for " + damage + " damage and gains " + (damage / 2) + " health.";
+        BS.playerMoves.SetActive(false);
+
+        yield return new WaitForSeconds(3f);
+
+        lastAttack = "SuckBlood";
+        StartCoroutine(BS.checkDamage());
+        BS.checkWin();
+        if (BS.state == BattleState.WON) BS.StartCoroutine("youWin"); // start function for win state
+        else if (BS.state == BattleState.LOST) BS.StartCoroutine("youLose"); // start function for loss state
+        else BS.state = BattleState.NULL;
+
+    }
 
 
 
@@ -231,4 +262,19 @@ public class AttackMoves : MonoBehaviour
 
         else StartCoroutine(Bite());
     }
+
+    IEnumerator Ogre()
+    {
+        yield return new WaitForSeconds(0f);
+
+        StartCoroutine(Smash());
+    }
+
+    IEnumerator Leech()
+    {
+        yield return new WaitForSeconds(0f);
+
+        StartCoroutine(SuckBlood());
+    }
+
 }

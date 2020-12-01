@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2862378459823294526
+--- !u!1 &469032598281122521
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,55 +8,55 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4742545378045760156}
-  - component: {fileID: 8076733433774407626}
+  - component: {fileID: 6983824381943621755}
+  - component: {fileID: 5849387458462237997}
   m_Layer: 0
-  m_Name: Ogre
+  m_Name: Leech
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4742545378045760156
+--- !u!4 &6983824381943621755
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2862378459823294526}
+  m_GameObject: {fileID: 469032598281122521}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -120.68983, y: 12.557212, z: 4.1157665}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8076733433774407626
+--- !u!114 &5849387458462237997
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2862378459823294526}
+  m_GameObject: {fileID: 469032598281122521}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 148e05999903ad74792c62f803e2a5e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitName: Ogre
-  unitLevel: 8
-  xp: 41
-  xpAwarded: 0
+  unitName: Leech
+  unitLevel: 5
+  xp: 25
+  xpAwarded: 5
   unitSprite: {fileID: 0}
-  baseDamage: 13
-  damage: 0
+  baseDamage: 12
+  damage: 21
   armor: 0
-  baseHP: 14
-  HP: 14
+  baseHP: 11
+  HP: 22
   baseMana: 0
   mana: 0
-  manaChargeRate: 42
-  currentHP: 0
+  manaChargeRate: 46
+  currentHP: 520
   moveOneSet: 
   moveTwoSet: 
   moveThreeSet: 
