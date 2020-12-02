@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: VillagerTwoDialOne
   m_EditorClassIdentifier: 
   stringList:
-  - Hey, you want to go fight in the gym right?
-  - Well, only way for you to do that is if I recommend you as a worthy fighter.
-  - But I can't tell if you are or not.
-  - So to prove yourself, why don't you go kill the ogre just east of town.
+  - 'Hey, you''re looking to fight the gym leader right? '
+  - Well, you'll need some experience going up against some stronger enemies.
+  - If you're looking for some practice there is a troop of ogres east of town.
+  - Why don't you go test your might against some of them.
   - That would prove you're a real fighter.
   - ...plus get rid of our ogre problem...
   - 

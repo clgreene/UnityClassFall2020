@@ -247,6 +247,9 @@ public class AttackMoves : MonoBehaviour
 
 
 
+
+
+
     //The following routines are all the AI logic for enemy battles
 
     IEnumerator Skeletal()
