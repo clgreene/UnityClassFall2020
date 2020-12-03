@@ -194,7 +194,18 @@ public class BattleSystem : MonoBehaviour
             {
                 overTimeCounterEnemy -= 1;
                 enemyUnitOne.currentHP -= damageOverTimeEnemy;
+                enemyHudOne.SetHP(enemyUnitOne);
+                playerHudOne.SetHP(playerUnitOne);
                 dialogueText.text = enemyUnitOne.unitName + " takes damage from " + dotAttackEnemy;
+                yield return new WaitForSeconds(2f);
+            }
+            if (overTimeCounterPlayer != 0)
+            {
+                overTimeCounterPlayer -= 1;
+                playerUnitOne.currentHP -= damageOverTimePlayer;
+                enemyHudOne.SetHP(enemyUnitOne);
+                playerHudOne.SetHP(playerUnitOne);
+                dialogueText.text = playerUnitOne.unitName + " takes damage from " + dotAttackPlayer;
                 yield return new WaitForSeconds(2f);
             }
         }
@@ -205,7 +216,18 @@ public class BattleSystem : MonoBehaviour
             {
                 overTimeCounterPlayer -= 1;
                 playerUnitOne.currentHP -= damageOverTimePlayer;
+                enemyHudOne.SetHP(enemyUnitOne);
+                playerHudOne.SetHP(playerUnitOne);
                 dialogueText.text = playerUnitOne.unitName + " takes damage from " + dotAttackPlayer;
+                yield return new WaitForSeconds(2f);
+            }
+            if (overTimeCounterEnemy != 0)
+            {
+                overTimeCounterEnemy -= 1;
+                enemyUnitOne.currentHP -= damageOverTimeEnemy;
+                enemyHudOne.SetHP(enemyUnitOne);
+                playerHudOne.SetHP(playerUnitOne);
+                dialogueText.text = enemyUnitOne.unitName + " takes damage from " + dotAttackEnemy;
                 yield return new WaitForSeconds(2f);
             }
         }

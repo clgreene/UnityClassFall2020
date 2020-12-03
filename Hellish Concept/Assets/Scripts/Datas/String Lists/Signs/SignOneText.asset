@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SignOneText
   m_EditorClassIdentifier: 
   stringList:
-  - F
+  - -F to read-
   - -Welcome to Hell-
   - 'Friendly tips for visitors: '
   - Press F to talk, pick up, and interact with stuff.

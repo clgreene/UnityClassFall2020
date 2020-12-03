@@ -6,6 +6,7 @@ public class CharacterMover : MonoBehaviour
 {
 
     public float moveSpeed;
+    public float jumpSpeed;
 
     private float timer = 2;
     private Rigidbody rb;
@@ -39,6 +40,8 @@ public class CharacterMover : MonoBehaviour
             if (Input.GetKey(KeyCode.A)) transform.Translate(-moveSpeed * Time.deltaTime, 0, 0);
             if (Input.GetKey(KeyCode.S)) transform.Translate(0, 0, -moveSpeed * Time.deltaTime);
             if (Input.GetKey(KeyCode.D)) transform.Translate(moveSpeed * Time.deltaTime, 0, 0);
+            if (Input.GetKeyDown(KeyCode.Space)) transform.Translate(0, jumpSpeed * Time.deltaTime, 0);
+            //better jump, do some platforming.
         }
 
         
