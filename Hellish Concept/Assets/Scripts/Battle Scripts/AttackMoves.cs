@@ -244,6 +244,37 @@ public class AttackMoves : MonoBehaviour
     }
 
 
+    IEnumerator VenomousBite()
+    {
+        if (BS.state == BattleState.PLAYERTURN)
+        {
+            BS.playerUnitOneMana -= 25;
+            BS.overTimeCounterEnemy = 5;
+            BS.damageOverTimeEnemy = ((BS.activeUnit.damage * 10) / 100);
+            BS.dotAttackEnemy = "Venom";
+
+        }
+        if (BS.state == BattleState.ENEMYTURN)
+        {
+            BS.enemyUnitOneMana -= 25;
+            BS.overTimeCounterPlayer = 5;
+            BS.damageOverTimePlayer = ((BS.activeUnit.damage * 10) / 100);
+            BS.dotAttackPlayer = "Venom";
+        }
+
+        BS.enemyHudOne.SetHP(BS.enemyUnitOne);
+        BS.playerHudOne.SetHP(BS.playerUnitOne);
+        BS.dialogueText.text = BS.activeUnit.unitName + " poisons it's enemy.";
+        yield return new WaitForSeconds(3f);
+        StartCoroutine(BS.checkDamage());
+        yield return new WaitForSeconds(3f);
+        BS.checkWin();
+        if (BS.state == BattleState.WON) BS.StartCoroutine("youWin"); // start function for win state
+        else if (BS.state == BattleState.LOST) BS.StartCoroutine("youLose"); // start function for loss state
+        else BS.state = BattleState.NULL;
+    }
+
+
 
 
 
