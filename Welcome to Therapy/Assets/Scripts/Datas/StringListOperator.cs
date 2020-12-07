@@ -15,6 +15,8 @@ public class StringListOperator : ScriptableObject
 
     public string dialogueString;
     public string speakerString;
+
+    public bool final;
     
 
     public void SetStringList()
@@ -45,6 +47,11 @@ public class StringListOperator : ScriptableObject
 
         if (dialogue.value == currentList.dialogueList.Count - 1)
         {
+            if (final == true)
+            {
+                currentList.SetFinalButtons();
+            }
+            
             currentList.SetButtons();
 
         }
