@@ -35,9 +35,10 @@ MonoBehaviour:
   - Becky
   - You
   buttonManager: {fileID: 0}
-  buttonOneString: 
-  buttonTwoString: 
-  branchOne: 0
-  branchTwo: 0
-  branchInt: {fileID: 0}
-  dialogueInt: {fileID: 0}
+  buttonOneString: Was there anything else?
+  buttonTwoString: See you at our next meeting.
+  branchOne: 5
+  branchTwo: 6
+  branchInt: {fileID: 11400000, guid: fc6bf052f1f1de54e83183181093f2df, type: 2}
+  dialogueInt: {fileID: 11400000, guid: f0178581d1e8cad42875fc2f35cc9516, type: 2}
+  finishButtonString: 
