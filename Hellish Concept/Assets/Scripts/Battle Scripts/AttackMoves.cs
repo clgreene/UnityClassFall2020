@@ -250,7 +250,7 @@ public class AttackMoves : MonoBehaviour
         {
             BS.playerUnitOneMana -= 25;
             BS.overTimeCounterEnemy = 5;
-            BS.damageOverTimeEnemy = ((BS.activeUnit.damage * 10) / 100);
+            BS.damageOverTimeEnemy = ((BS.activeUnit.damage * 15) / 100);
             BS.dotAttackEnemy = "Venom";
 
         }
@@ -258,7 +258,7 @@ public class AttackMoves : MonoBehaviour
         {
             BS.enemyUnitOneMana -= 25;
             BS.overTimeCounterPlayer = 5;
-            BS.damageOverTimePlayer = ((BS.activeUnit.damage * 10) / 100);
+            BS.damageOverTimePlayer = ((BS.activeUnit.damage * 15) / 100);
             BS.dotAttackPlayer = "Venom";
         }
 
@@ -298,7 +298,73 @@ public class AttackMoves : MonoBehaviour
         else if (BS.state == BattleState.LOST) BS.StartCoroutine("youLose"); // start function for loss state
         else BS.state = BattleState.NULL;
 
+    }
 
+    IEnumerator RepeatedJab()
+    {
+
+
+        if (BS.state == BattleState.PLAYERTURN) BS.playerUnitOneMana -= 5;
+        if (BS.state == BattleState.ENEMYTURN) BS.enemyUnitOneMana -= 5;
+
+
+
+        int damage = (BS.activeUnit.damage * 10) / 100;
+        BS.defendingUnit.currentHP -= damage;
+        BS.enemyHudOne.SetHP(BS.enemyUnitOne);
+        BS.playerHudOne.SetHP(BS.playerUnitOne);
+        BS.dialogueText.text = BS.activeUnit.unitName + " Jabs quickly doing " + damage + " damage!";
+        BS.playerMoves.SetActive(false);
+
+        yield return new WaitForSeconds(2f);
+
+        lastAttack = "repeatedJab";
+        StartCoroutine(BS.checkDamage());
+        BS.checkWin();
+        if (BS.state == BattleState.WON) BS.StartCoroutine("youWin"); // start function for win state
+        else if (BS.state == BattleState.LOST) BS.StartCoroutine("youLose"); // start function for loss state
+        else BS.state = BattleState.NULL;
+
+    }
+
+    IEnumerator BreathFire()
+    {
+
+
+        if (BS.state == BattleState.PLAYERTURN) BS.playerUnitOneMana -= 40;
+        if (BS.state == BattleState.ENEMYTURN) BS.enemyUnitOneMana -= 40;
+
+        if (BS.state == BattleState.PLAYERTURN)
+        {
+            BS.playerUnitOneMana -= 50;
+            BS.overTimeCounterEnemy = 3;
+            BS.damageOverTimeEnemy = ((BS.activeUnit.damage * 15) / 100);
+            BS.dotAttackEnemy = "Burn";
+
+        }
+        if (BS.state == BattleState.ENEMYTURN)
+        {
+            BS.enemyUnitOneMana -= 50;
+            BS.overTimeCounterPlayer = 3;
+            BS.damageOverTimePlayer = ((BS.activeUnit.damage * 15) / 100);
+            BS.dotAttackPlayer = "Burn";
+        }
+
+        int damage = (BS.activeUnit.damage * 60) / 100;
+        BS.defendingUnit.currentHP -= damage;
+        BS.enemyHudOne.SetHP(BS.enemyUnitOne);
+        BS.playerHudOne.SetHP(BS.playerUnitOne);
+        BS.dialogueText.text = BS.activeUnit.unitName + " Breaths fire and burns it's foe, dealing " + damage + " damage!";
+        BS.playerMoves.SetActive(false);
+
+        yield return new WaitForSeconds(2f);
+
+        lastAttack = "BreathFire";
+        StartCoroutine(BS.checkDamage());
+        BS.checkWin();
+        if (BS.state == BattleState.WON) BS.StartCoroutine("youWin"); // start function for win state
+        else if (BS.state == BattleState.LOST) BS.StartCoroutine("youLose"); // start function for loss state
+        else BS.state = BattleState.NULL;
     }
 
 
@@ -310,6 +376,27 @@ public class AttackMoves : MonoBehaviour
 
     //The following routines are all the AI logic for enemy battles
 
+
+        IEnumerator Wyvern()
+    {
+        yield return new WaitForSeconds(0f);
+
+        if (BS.enemyTurnNumber == 1)
+        {
+            StartCoroutine(BreathFire());
+        }
+
+        else StartCoroutine(Bite());
+
+    }
+
+            
+    IEnumerator Gorgon()
+    {
+        yield return new WaitForSeconds(0f);
+
+        StartCoroutine(RepeatedJab());
+    }
 
     IEnumerator GiantSpider()
     {

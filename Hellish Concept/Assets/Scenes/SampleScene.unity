@@ -3259,122 +3259,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 157148441}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &158050815
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 158050816}
-  - component: {fileID: 158050818}
-  - component: {fileID: 158050817}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &158050816
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 158050815}
-  m_LocalRotation: {x: -0.38284466, y: 0, z: 0, w: 0.92381275}
-  m_LocalPosition: {x: 0, y: -0.427, z: -2.12}
-  m_LocalScale: {x: 1, y: 0.15424, z: 2.6489}
-  m_Children: []
-  m_Father: {fileID: 1354324721}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -45.02, y: 0, z: 0}
---- !u!114 &158050817
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 158050815}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cee37227434ee30468a4ffd85ebbd1e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TriggerCycleEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: 1924729596e68f64eaab13ab8b47c2f1, type: 2}
-        m_MethodName: GetNextString
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  TriggerUpdateEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: 1924729596e68f64eaab13ab8b47c2f1, type: 2}
-        m_MethodName: SetTextUIToValue
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1674396153}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Text, UnityEngine.UI
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  TriggerExitEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: 1924729596e68f64eaab13ab8b47c2f1, type: 2}
-        m_MethodName: ExitTextUI
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1674396153}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Text, UnityEngine.UI
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  TriggerSetEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: 1924729596e68f64eaab13ab8b47c2f1, type: 2}
-        m_MethodName: SetStringList
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  playerNear: 0
-  currentDialogue: {fileID: 0}
-  inv: {fileID: 0}
---- !u!65 &158050818
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 158050815}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &158727997
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12272,6 +12156,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c14e0314ff479a4fb496a53e0cc51b6, type: 3}
+--- !u!1 &532853612
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 532853613}
+  - component: {fileID: 532853615}
+  - component: {fileID: 532853614}
+  m_Layer: 0
+  m_Name: Leader Trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &532853613
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532853612}
+  m_LocalRotation: {x: -0.38268343, y: -0, z: -0, w: 0.92387956}
+  m_LocalPosition: {x: 0.0935973, y: -0.83573204, z: -1.124885}
+  m_LocalScale: {x: 0.71942437, y: 0.6849314, z: 0.68493146}
+  m_Children: []
+  m_Father: {fileID: 1354324721}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &532853614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532853612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 596fa8ec7291c284ca45b05dec4e6ab5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionText: {fileID: 1674396153}
+  SS: {fileID: 394595329}
+  shovel: {fileID: 11400000, guid: d35c3eb9227c87c45a5f6a64b92f03c1, type: 2}
+  scene: 1
+  text: No one can beat me!
+  cam1: {fileID: 963194227}
+  cam2: {fileID: 1651125244}
+  battleUI: {fileID: 1992310514}
+  BS: {fileID: 786810089}
+  battleEnemy: {fileID: 4966931256313250321, guid: 53e2ca11325c8444e94978731e223d7d,
+    type: 3}
+  xp: 140
+--- !u!65 &532853615
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532853612}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.696331, y: 1.9669361, z: 3.5819836}
+  m_Center: {x: -0.025362015, y: 0.48346806, z: 0.5022688}
 --- !u!1 &538159799
 GameObject:
   m_ObjectHideFlags: 0
@@ -25897,7 +25850,7 @@ MonoBehaviour:
   BS: {fileID: 786810089}
   battleEnemy: {fileID: 6954954890534067164, guid: cd87bc15e9483d247bea832007d38ba4,
     type: 3}
-  xp: 25
+  xp: 100
 --- !u!65 &1111360050
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31390,7 +31343,7 @@ Transform:
   m_LocalPosition: {x: -45.96, y: 1.5, z: 66.48}
   m_LocalScale: {x: 1.39, y: 2.7600002, z: 0.16}
   m_Children:
-  - {fileID: 158050816}
+  - {fileID: 532853613}
   m_Father: {fileID: 1311454122}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
@@ -38573,9 +38526,9 @@ MonoBehaviour:
   cam2: {fileID: 1651125244}
   battleUI: {fileID: 1992310514}
   BS: {fileID: 786810089}
-  battleEnemy: {fileID: 4767779951288982540, guid: 7dc443dab216f8143acc5cef22650c26,
+  battleEnemy: {fileID: 2785673412358003340, guid: 4178ee33d69249a4298e1363303cafdf,
     type: 3}
-  xp: 25
+  xp: 100
 --- !u!65 &1661135756
 BoxCollider:
   m_ObjectHideFlags: 0
