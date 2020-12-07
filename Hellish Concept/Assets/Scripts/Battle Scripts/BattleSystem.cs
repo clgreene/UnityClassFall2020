@@ -90,12 +90,17 @@ public class BattleSystem : MonoBehaviour
     public string dotAttackPlayer;
     public string dotAttackEnemy;
 
+    public int enemyTurnNumber;
+    public int playerTurnNumber;
+
 
     //Start the SetupBattle Coroutine that will set up all our variables and sprites for our battle.
     public void StartBattle()
     {
 
         state = BattleState.START;
+        enemyTurnNumber = 0;
+        playerTurnNumber = 0;
         playerPrefab = inv.units[0];
         enemyPrefab.GetComponent<Unit>().checkLevel();
         playerMoves.SetActive(false);

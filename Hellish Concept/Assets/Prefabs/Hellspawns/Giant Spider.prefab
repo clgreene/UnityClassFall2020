@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6954954890534067164
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 499098497791803774}
+  - component: {fileID: 3975432520567991336}
+  m_Layer: 0
+  m_Name: Giant Spider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &499098497791803774
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6954954890534067164}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -37.81912, y: 6.95731, z: 47.891033}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3975432520567991336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6954954890534067164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 148e05999903ad74792c62f803e2a5e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unitName: GiantSpider
+  unitLevel: 8
+  xp: 41
+  xpAwarded: 0
+  unitSprite: {fileID: 0}
+  baseDamage: 12
+  damage: 0
+  armor: 0
+  baseHP: 11
+  HP: 14
+  baseMana: 0
+  mana: 0
+  manaChargeRate: 53
+  currentHP: 0
+  moveOneSet: 
+  moveTwoSet: 
+  moveThreeSet: 
+  attacks: {fileID: 0}
+  enemyAI: {fileID: 0}
+  BS: {fileID: 0}

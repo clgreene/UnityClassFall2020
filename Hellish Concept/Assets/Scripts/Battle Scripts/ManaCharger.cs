@@ -40,6 +40,7 @@ public class ManaCharger : MonoBehaviour
 
             if (BS.playerUnitOneMana >= 100)
             {
+                BS.playerTurnNumber += 1;
                 BS.activeUnit = BS.playerUnitOne;
                 BS.defendingUnit = BS.enemyUnitOne;
                 BS.dialogueText.text = "It's your turn.";
@@ -49,6 +50,7 @@ public class ManaCharger : MonoBehaviour
             }
             if (BS.enemyUnitOneMana >= 100)
             {
+                BS.enemyTurnNumber += 1;
                 BS.activeUnit = BS.enemyUnitOne;
                 BS.defendingUnit = BS.playerUnitOne;
                 BS.state = BattleState.ENEMYTURN;

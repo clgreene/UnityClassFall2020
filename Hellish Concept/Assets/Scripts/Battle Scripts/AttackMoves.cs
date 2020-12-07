@@ -274,6 +274,33 @@ public class AttackMoves : MonoBehaviour
         else BS.state = BattleState.NULL;
     }
 
+    IEnumerator Stab()
+    {
+
+
+        if (BS.state == BattleState.PLAYERTURN) BS.playerUnitOneMana -= 30;
+        if (BS.state == BattleState.ENEMYTURN) BS.enemyUnitOneMana -= 30;
+
+
+        int damage = (BS.activeUnit.damage * 25) / 100;
+        BS.defendingUnit.currentHP -= damage;
+        BS.enemyHudOne.SetHP(BS.enemyUnitOne);
+        BS.playerHudOne.SetHP(BS.playerUnitOne);
+        BS.dialogueText.text = BS.activeUnit.unitName + " Stabbed it's foe and dealt " + damage + " damage!";
+        BS.playerMoves.SetActive(false);
+
+        yield return new WaitForSeconds(3f);
+
+        lastAttack = "Stab";
+        StartCoroutine(BS.checkDamage());
+        BS.checkWin();
+        if (BS.state == BattleState.WON) BS.StartCoroutine("youWin"); // start function for win state
+        else if (BS.state == BattleState.LOST) BS.StartCoroutine("youLose"); // start function for loss state
+        else BS.state = BattleState.NULL;
+
+
+    }
+
 
 
 
@@ -282,6 +309,23 @@ public class AttackMoves : MonoBehaviour
 
 
     //The following routines are all the AI logic for enemy battles
+
+
+    IEnumerator GiantSpider()
+    {
+
+        yield return new WaitForSeconds(0f);
+
+        if (BS.enemyTurnNumber == 1)
+        {
+            StartCoroutine(VenomousBite());
+
+        }
+
+        else StartCoroutine(Stab());
+
+
+    }
 
     IEnumerator Skeletal()
     {
