@@ -25,6 +25,9 @@ public class BattleTrigger : MonoBehaviour
 
     public int xp;
 
+    public bool specialWin;
+    public MonoBehaviour specialWinCondition;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -58,6 +61,12 @@ public class BattleTrigger : MonoBehaviour
             cam2.enabled = true;
             battleUI.SetActive(true);
             battleEnemy.GetComponent<Unit>().xp = xp;
+            if (specialWin == true)
+            {
+                BS.specialWin = true;
+                BS.specialWinCondition = specialWinCondition;
+            }
+            else BS.specialWin = false;
             BS.enemyPrefab = battleEnemy;
             BS.StartBattle();
             BS.cantMove.value = true;

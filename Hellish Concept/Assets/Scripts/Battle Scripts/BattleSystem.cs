@@ -93,6 +93,9 @@ public class BattleSystem : MonoBehaviour
     public int enemyTurnNumber;
     public int playerTurnNumber;
 
+    public bool specialWin;
+    public MonoBehaviour specialWinCondition;
+
 
     //Start the SetupBattle Coroutine that will set up all our variables and sprites for our battle.
     public void StartBattle()
@@ -176,6 +179,7 @@ public class BattleSystem : MonoBehaviour
         Object.Destroy(enemyGO);
         playerHudOne.closeHUD();
         battleUI.SetActive(false);
+        if (specialWin == true) specialWinCondition.StartCoroutine("bahaviour");
     }
 
     public IEnumerator youLose()
