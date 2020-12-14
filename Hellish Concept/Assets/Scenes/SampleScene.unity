@@ -531,7 +531,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0
-  jumpForce: 30
+  jumpForce: 2000
   FallRespawn: {fileID: 11400000, guid: 6a5d9305d593eb44f89024609d948410, type: 2}
   dialogue: {fileID: 11400000, guid: d39e6858060ffb6418d944930a7d7ed1, type: 2}
 --- !u!114 &24926202

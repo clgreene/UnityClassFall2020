@@ -45,8 +45,11 @@ public class CharacterMover : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            transform.Translate(0, moveSpeed * Time.deltaTime, 0);
             rb.velocity = new Vector3(0, 0, 0);
-            rb.AddForce(0, jumpForce * Time.deltaTime * 5000, 0);
+            rb.AddForce(0, jumpForce, 0);
+            //transform.Translate(0, jumpForce * Time.deltaTime * 5000, 0);
+  
         }
 
     }
