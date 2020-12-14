@@ -179,7 +179,7 @@ public class BattleSystem : MonoBehaviour
         Object.Destroy(enemyGO);
         playerHudOne.closeHUD();
         battleUI.SetActive(false);
-        if (specialWin == true) specialWinCondition.StartCoroutine("bahaviour");
+        if (specialWin == true) specialWinCondition.StartCoroutine("behaviour");
     }
 
     public IEnumerator youLose()

@@ -531,7 +531,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0
-  jumpForce: 20
+  jumpForce: 30
   FallRespawn: {fileID: 11400000, guid: 6a5d9305d593eb44f89024609d948410, type: 2}
   dialogue: {fileID: 11400000, guid: d39e6858060ffb6418d944930a7d7ed1, type: 2}
 --- !u!114 &24926202
@@ -1938,6 +1938,7 @@ MonoBehaviour:
     type: 3}
   xp: 25
   specialWin: 0
+  specialWinCondition: {fileID: 0}
 --- !u!65 &130251031
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4681,6 +4682,7 @@ MonoBehaviour:
     type: 3}
   xp: 100
   specialWin: 0
+  specialWinCondition: {fileID: 0}
 --- !u!65 &242497495
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5519,6 +5521,7 @@ MonoBehaviour:
     type: 3}
   xp: 35
   specialWin: 0
+  specialWinCondition: {fileID: 0}
 --- !u!65 &269579777
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8091,6 +8094,7 @@ Transform:
   m_Children:
   - {fileID: 786810086}
   - {fileID: 1992310515}
+  - {fileID: 1949012764}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10962,6 +10966,7 @@ MonoBehaviour:
     type: 3}
   xp: 25
   specialWin: 0
+  specialWinCondition: {fileID: 0}
 --- !u!65 &515520206
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11391,7 +11396,8 @@ MonoBehaviour:
   battleEnemy: {fileID: 4966931256313250321, guid: 53e2ca11325c8444e94978731e223d7d,
     type: 3}
   xp: 140
-  specialWin: 0
+  specialWin: 1
+  specialWinCondition: {fileID: 1949012765}
 --- !u!65 &532853615
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12072,6 +12078,7 @@ MonoBehaviour:
     type: 3}
   xp: 25
   specialWin: 0
+  specialWinCondition: {fileID: 0}
 --- !u!65 &555756261
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21354,6 +21361,7 @@ MonoBehaviour:
     type: 3}
   xp: 25
   specialWin: 0
+  specialWinCondition: {fileID: 0}
 --- !u!65 &1000020901
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22963,6 +22971,7 @@ MonoBehaviour:
     type: 3}
   xp: 45
   specialWin: 0
+  specialWinCondition: {fileID: 0}
 --- !u!65 &1054983306
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24087,6 +24096,7 @@ MonoBehaviour:
     type: 3}
   xp: 100
   specialWin: 0
+  specialWinCondition: {fileID: 0}
 --- !u!65 &1111360050
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29162,6 +29172,7 @@ MonoBehaviour:
     type: 3}
   xp: 25
   specialWin: 0
+  specialWinCondition: {fileID: 0}
 --- !u!65 &1366960450
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30540,6 +30551,7 @@ MonoBehaviour:
     type: 3}
   xp: 25
   specialWin: 0
+  specialWinCondition: {fileID: 0}
 --- !u!65 &1421816949
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33615,6 +33627,7 @@ MonoBehaviour:
     type: 3}
   xp: 35
   specialWin: 0
+  specialWinCondition: {fileID: 0}
 --- !u!65 &1559851253
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35361,6 +35374,7 @@ MonoBehaviour:
     type: 3}
   xp: 100
   specialWin: 0
+  specialWinCondition: {fileID: 0}
 --- !u!65 &1661135756
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39927,6 +39941,51 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1939937563}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1949012763
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1949012764}
+  - component: {fileID: 1949012765}
+  m_Layer: 0
+  m_Name: WinManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1949012764
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949012763}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 394595330}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1949012765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949012763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f100ccb635fc7494e95d9bb0fa6190c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: {fileID: 1674396153}
+  levelWin: {fileID: 11400000, guid: 81cd9fa01a0b86244829cd15148e9bdc, type: 2}
 --- !u!1 &1952066856
 GameObject:
   m_ObjectHideFlags: 0
@@ -40332,6 +40391,7 @@ MonoBehaviour:
     type: 3}
   xp: 25
   specialWin: 0
+  specialWinCondition: {fileID: 0}
 --- !u!1 &1970040837
 GameObject:
   m_ObjectHideFlags: 0
@@ -42011,6 +42071,7 @@ MonoBehaviour:
     type: 3}
   xp: 25
   specialWin: 0
+  specialWinCondition: {fileID: 0}
 --- !u!65 &2046940706
 BoxCollider:
   m_ObjectHideFlags: 0

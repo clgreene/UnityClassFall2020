@@ -42,17 +42,20 @@ public class CharacterMover : MonoBehaviour
             if (Input.GetKey(KeyCode.D)) transform.Translate(moveSpeed * Time.deltaTime, 0, 0);
         }
 
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             rb.velocity = new Vector3(0, 0, 0);
             rb.AddForce(0, jumpForce * Time.deltaTime * 5000, 0);
         }
-        
 
     }
 
     private void FixedUpdate()
     {
+
+
+
         //Setting Spawn Points
         if (timer <= 0 && rb.velocity.y == 0)
         {
