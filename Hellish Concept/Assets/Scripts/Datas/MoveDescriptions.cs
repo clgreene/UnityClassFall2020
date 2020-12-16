@@ -30,7 +30,7 @@ public class MoveDescriptions : MonoBehaviour
     {
         if (inv.units.Count > 0)
         {
-            if (inv.units[0].GetComponent<Unit>().unitName == "Hound")
+            if (inv.units[0].GetComponent<Unit>().unitName == "Hellhound")
             {
                 moveOne.text = "Bite: Hellspawn bites it's opponent for some serious damage!";
                 moveTwo.text = "Lick Wounds: Hellspawn takes a moment to lick it's wounds, healing damamge.";
