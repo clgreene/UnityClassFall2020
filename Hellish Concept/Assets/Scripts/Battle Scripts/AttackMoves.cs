@@ -73,8 +73,8 @@ public class AttackMoves : MonoBehaviour
     IEnumerator Smash()
     {
 
-        if (BS.state == BattleState.PLAYERTURN) BS.playerUnitOneMana -= 70;
-        if (BS.state == BattleState.ENEMYTURN) BS.enemyUnitOneMana -= 70;
+        if (BS.state == BattleState.PLAYERTURN) BS.playerUnitOneMana -= 55;
+        if (BS.state == BattleState.ENEMYTURN) BS.enemyUnitOneMana -= 55;
 
         damage = (BS.activeUnit.damage * 90) / 100;
         BS.defendingUnit.currentHP -= ((damage * 40) / 100);
